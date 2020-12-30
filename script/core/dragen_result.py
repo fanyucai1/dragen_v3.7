@@ -11,7 +11,7 @@ parser.add_argument("-o","--output_dir",help="output directory",default=os.getcw
 args=parser.parse_args()
 
 if not os.path.exists(args.output_dir):
-    os.makedirs("%s"%(args.out_dir))
+    os.makedirs("%s"%(args.output_dir))
 
 outfile=open("%s/%s.tsv"%(args.output_dir,args.prefix),"w")
 outfile.write("Sample name\tTotal reads\tTotal bases\tQ30(%)\tMapping(%)\tInsert length\tDuplication(%)\tCapture rate(%)\tMean coverage(X)\t20X coverage(%)\t50X coverage(%)\t100X coverage(%)\tUniformity of coverage (PCT > 0.2*mean)\n")

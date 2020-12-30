@@ -72,7 +72,7 @@ for(root, dirs, files) in os.walk(fastq_dir):
                     core.wes_PoN.run(args.ref,file,file2,"%s/%s"%(wes_vcf,sample_name),sample_name,args.bed,args.normal_wes)
                 else:
                     core.wes.run(args.ref, file, file2, "%s/%s" % (wes_vcf, sample_name), sample_name,args.bed)
-                if sample_name != str_wes[sample_name]:
+                if sample_name!=str_wes[sample_name]:
                     tgex_script+=" %s "%(str_wes[sample_name])
                     tgex_script+=" --snvVcf %s/%s/%s.hard-filtered.vcf.gz --cnvVcf %s/%s/%s.cnv.vcf.gz --svVcf %s/%s/%s.sv.vcf.gz "%(wes_vcf,sample_name,sample_name,wes_vcf,sample_name,sample_name,wes_vcf,sample_name,sample_name)
                     subprocess.check_call(tgex_script, shell=True)
@@ -82,8 +82,12 @@ for(root, dirs, files) in os.walk(fastq_dir):
                     core.wgs_PoN.run(args.ref,file,file2,"%s/%s"%(wgs_vcf, sample_name),sample_name,args.normal_wgs)
                 else:
                     core.wgs.run(args.ref,file,file2,"%s/%s"%(wgs_vcf, sample_name),sample_name)
-                if sample_name != str_wgs[sample_name]:
+                if sample_name!=str_wgs[sample_name]:
                     tgex_script += " %s " % (str_wgs[sample_name])
                     tgex_script += " --snvVcf %s/%s/%s.hard-filtered.vcf.gz --cnvVcf %s/%s/%s.cnv.vcf.gz --svVcf %s/%s/%s.sv.vcf.gz "%(wgs_vcf,sample_name,sample_name,wgs_vcf,sample_name,sample_name,wgs_vcf,sample_name,sample_name)
                     subprocess.check_call(tgex_script,shell=True)
 #########################################################
+if args.wes:
+    core.result_parse.run(wes_vcf,"%s.wes"%(localtime),args.outdir)
+if args.wgs:
+    core.result_parse.run(wgs_vcf,"%s.wgs"%(localtime),args.outdir)

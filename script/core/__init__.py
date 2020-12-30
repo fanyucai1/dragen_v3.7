@@ -5,3 +5,4 @@ from . import wes
 from . import wes_PoN
 from . import wgs
 from . import wgs_PoN
+from . import result_parse
