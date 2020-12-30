@@ -100,6 +100,4 @@ somatic variants calling所用的数据集以及文献
 
 3. [hap.py benchmarking toolkit](https://github.com/Illumina/hap.py)
 
-456
-
 
