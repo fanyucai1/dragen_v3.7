@@ -23,7 +23,7 @@
 
 7. 针对短串联重复序列，拓展的短串联重复序列（tandem repeat expansions）往往与疾病相关，如下图：
 
-      ![STR][./STR.png]
+![STR][./STR.png]
 
 
 
