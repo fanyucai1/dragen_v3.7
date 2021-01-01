@@ -3,6 +3,7 @@
     * Fragile X Syndrome
 
     * amyotrophic lateral sclerosis
+    
     + 肌萎縮性脊髓側索硬化症
 
     * Huntington's disease
