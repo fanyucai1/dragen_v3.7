@@ -6,14 +6,11 @@
 
 2. 该分析目前只适用全基因组分析（PCR-free libraries文库，Repeats are only genotyped if the coverage at the locus is at least 10x）
 
-
 3. 拓展重复数据分析区域的大小默认是1000bp **--repeat-genotype-region-extension-length=1000**
 
 4. dragen在重复序列STR进行检测分析算法如下(illumina团队开发)
-
-   [ExpansionHunter](http://www.genome.org/cgi/doi/10.1101/gr.225672.117)
-
-   [Graph ExpansionHunter](https://doi.org/10.1101/572545)
+   [ExpansionHunter](http://www.genome.org/cgi/doi/10.1101/gr.225672.117) <br>
+   [Graph ExpansionHunter](https://doi.org/10.1101/572545) <br>
 
 5. dragen分析的重复序列目前主要针对的是短串联重复序列(STRs,Short tandem repeats)或者称为微卫星DNA(microsatellite DNA)，由1-6重复单元组成<br>
 
