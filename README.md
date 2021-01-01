@@ -80,10 +80,6 @@ wgs/wes
 
 1. [Triticum aestivum Assembly and Gene Annotation](https://plants.ensembl.org/Triticum_aestivum/Info/Annotation/)
 
-论证SV变异检测Manta性能
-
-1. [Kosugi S, Momozawa Y, Liu X, et al. Comprehensive evaluation of structural variation detection algorithms for whole genome sequencing[J]. Genome biology, 2019, 20(1): 117.](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1720-5)
-
 somatic variants calling所用的数据集以及文献
 
 1. [Deep whole-genome sequencing of 3 cancer cell lines on 2 sequencing platforms](https://www.nature.com/articles/s41598-019-55636-3#MOESM1)
