@@ -1,11 +1,11 @@
 1. 常见的研究方向：
 
-* Fragile X Syndrome
+    * Fragile X Syndrome
 
-* amyotrophic lateral sclerosis
+    * amyotrophic lateral sclerosis
     + 肌萎縮性脊髓側索硬化症
 
-* Huntington's disease
+    * Huntington's disease
 
 2. 该分析目前只适用全基因组分析（PCR-free libraries文库，Repeats are only genotyped if the coverage at the locus is at least 10x）
 
@@ -31,3 +31,5 @@
 [Dolzhenko E, van Vugt J J F A, Shaw R J, et al. Detection of long repeat expansions from PCR-free whole-genome sequence data[J]. Genome research, 2017, 27(11): 1895-1903.](http://www.genome.org/cgi/doi/10.1101/gr.225672.117)
 
 [Dolzhenko E, Deshpande V, Schlesinger F, et al. ExpansionHunter: a sequence-graph-based tool to analyze variation in short tandem repeat regions[J]. Bioinformatics, 2019, 35(22): 4754-4756.](https://academic.oup.com/bioinformatics/article/35/22/4754/5499079)
+
+[Anthony J , Hannan. Tandem repeats mediating genetic plasticity in health and disease.[J]. Nature reviews. Genetics, 2018.](https://www.nature.com/articles/nrg.2017.115)
