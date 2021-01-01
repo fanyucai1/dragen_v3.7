@@ -100,4 +100,8 @@ somatic variants calling所用的数据集以及文献
 
 3. [hap.py benchmarking toolkit](https://github.com/Illumina/hap.py)
 
+软件比较评估准确性(GATK, DRAGEN and DeepVariant)
+
+1. [Zhao S, Agafonov O, Azab A, et al. Accuracy and efficiency of germline variant calling pipelines for human genome data[J]. bioRxiv, 2020.](https://www.nature.com/articles/s41598-020-77218-4)
+
 
