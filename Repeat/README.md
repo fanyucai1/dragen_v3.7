@@ -26,6 +26,7 @@
 ![STR](./STR.png)
 
 
+
 参考文献
 
 [Dolzhenko E, van Vugt J J F A, Shaw R J, et al. Detection of long repeat expansions from PCR-free whole-genome sequence data[J]. Genome research, 2017, 27(11): 1895-1903.](http://www.genome.org/cgi/doi/10.1101/gr.225672.117)
