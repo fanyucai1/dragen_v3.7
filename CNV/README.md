@@ -24,7 +24,10 @@
 
 3. Self Normalization算法不适合用于WES全外显子样本 **--cnv-enable-self-normalization true**
 
-4. CNV默认分析参数: **--enable-cnv true --cnv-filter-copy-ratio 0.2 --cnv-filter-length 10000**<br>
+4. CNV默认分析参数:<br>
+   **--enable-cnv true**<br>
+   **--cnv-filter-copy-ratio 0.2**<br>
+   **--cnv-filter-length 10000**<br>
    **--cnv-filter-qual 10**PASS in the output VCF file<br>
    **--cnv-min-qual 3 --cnv-max-qual 200**
 
