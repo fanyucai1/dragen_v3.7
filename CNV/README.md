@@ -29,7 +29,8 @@
    **--cnv-filter-copy-ratio 0.2**<br>
    **--cnv-filter-length 10000**<br>
    **--cnv-filter-qual 10**PASS in the output VCF file<br>
-   **--cnv-min-qual 3 --cnv-max-qual 200**
+   **--cnv-min-qual 3<br>
+   --cnv-max-qual 200**
 
 5. 概念
    + **CNV: copy number variation (deletions and duplications >50 bp).**<br>[Caspar S M, Dubacher N, Kopps A M, et al. Clinical sequencing: from raw data to diagnosis with lifetime value[J]. Clinical genetics, 2018, 93(3): 508-519.](https://onlinelibrary.wiley.com/doi/full/10.1111/cge.13190) <br>
