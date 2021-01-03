@@ -8,7 +8,7 @@
 
 3. 拓展重复数据分析区域的大小默认是1000bp **--repeat-genotype-region-extension-length=1000**
 
-4. dragen在重复序列STR进行检测分析算法如下(illumina团队开发)
+4. dragen在重复序列STR进行检测分析算法如下(illumina团队开发) <br>
    [ExpansionHunter](http://www.genome.org/cgi/doi/10.1101/gr.225672.117) <br>
    [Graph ExpansionHunter](https://doi.org/10.1101/572545) <br>
 
