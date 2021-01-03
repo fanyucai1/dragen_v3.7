@@ -1,6 +1,7 @@
 #Email:yucai.fan@illumina.com
 #2020.11.16 version:1.0
 #2020.11.30 version:2.0 fix bug:the samplesheet in '--no-lane-splitting'
+#2021.01.03 version:3.0 rewrite+tgex+PoN
 
 import os,sys,re,argparse,time,subprocess
 sub=os.path.abspath(__file__)

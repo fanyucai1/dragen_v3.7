@@ -13,10 +13,7 @@
   + [dragen服务器安装说明文档.pdf](Documents/dragen_v3服务器场地准备和安装指南.pdf)
 
 ## quick start
-+ 一键运行WGS：SNV+CNV+SV+repeat [WGS.sh](script/)
-+ 一键运行WES：SNV+CNV+SV [WES.sh](script/)
-+ 一键运行bcl2vcf: [bcl2vcf.py](script/)
-+ 统计dragen下机数据分析结果: [dragen_result.py](script/)
++ 统计dragen下机数据分析结果: [dragen_result.py](script/core)
 
 ## input files
 
