@@ -39,12 +39,13 @@ fastq_dir=out_path+"/fastq"
 subprocess.check_call("mkdir -p %s"%(fastq_dir),shell=True)
 #########################################################identify samplesheet
 infile=open(args.samplesheet,"r")
-par=""
+par,sample_name_suffix="",3
 for line in infile:
     line=line.strip()
     if re.search('Sample_ID',line) or re.search('Sample_Name',line):
         if re.search('Lane',line):
             par=" --no-lane-splitting false "
+            sample_name_suffix=4
         else:
             par = " --no-lane-splitting true "
 infile.close()
@@ -78,7 +79,7 @@ for(root, dirs, files) in os.walk(fastq_dir):
               "--enable-bam-indexing true --enable-variant-caller true --enable-sv true --cnv-enable-self-normalization true " % (os.path.abspath(args.ref))
         array=file.split("_")
         name,file2,shell="","",""
-        for i in range(0,len(array)-3):
+        for i in range(0,len(array)-sample_name_suffix):
             name+=array[i]
             name+="_"
         name=name.strip("_")
