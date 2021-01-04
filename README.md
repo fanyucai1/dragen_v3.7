@@ -28,6 +28,7 @@
     + --tumor-fastq1 tumor.R1.fastq --tumor-fastq2 tumor.R2.fastq
   + **Tumor normal**
     + -1 sample.R1.fastq -2 sample.R2.fastq --tumor-fastq1 tumor.R1.fastq --tumor-fastq2 tumor.R2.fastq
+
 ## output files
   + **SNV+Indel:**                \<output-file-prefix\>.hard-filtered.vcf.gz
   + **CNV:**                      \<output-file-prefix\>.cnv.vcf.gz
@@ -42,7 +43,7 @@
     + score: 
         + increases 0.025(homozygous variant) 
         + decreases with a large penalty (1–0.025) for every heterozygous SNV
-  + **覆盖度统计文件:**      \<output-file-prefix\>coverage_metrics.csv
+  + **覆盖度统计文件:**      \<output-file-prefix\>.coverage_metrics.csv
   + **比对结果统计文件:**  \<output prefix\>.mapping_metrics.csv
   + **染色体倍型(适用全基因组):**      \<output prefix\>.ploidy.vcf.gz,\<output-file-prefix\>.ploidy_estimation_metrics.csv
 
