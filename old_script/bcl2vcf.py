@@ -1,6 +1,7 @@
 #Email:yucai.fan@illumina.com
 #2020.11.16 version:1.0
 #2020.11.30 version:2.0 fix bug:the samplesheet in '--no-lane-splitting'
+#2021.01.04 vserion:3.0 fix bug:add parameter '--sample_name_suffix'
 
 import os
 import argparse
