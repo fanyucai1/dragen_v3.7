@@ -28,7 +28,7 @@
    **--enable-cnv true**<br>
    **--cnv-filter-copy-ratio 0.2**<br>
    **--cnv-filter-length 10000**<br>
-   **--cnv-filter-qual 10**PASS in the output VCF file<br>
+   **--cnv-filter-qual 10** ###PASS in the output VCF file<br>
    **--cnv-min-qual 3<br>
    --cnv-max-qual 200**
 
