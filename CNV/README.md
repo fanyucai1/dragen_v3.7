@@ -1,4 +1,4 @@
-## CNV
+# dragen_CNV
 
 1. 解析度
 
@@ -32,7 +32,12 @@
    **--cnv-min-qual 3<br>
    --cnv-max-qual 200**
 
-5. 概念
+5. 对于靶向panel，关于CNV使用dragen以及建立PoN的处理可以参考以下文献<br> 
+   [Patel B, Parets S, Akana M, et al. Comprehensive genetic testing for female and male infertility using next-generation sequencing[J]. Journal of assisted reproduction and genetics, 2018, 35(8): 1489-1496.](https://link.springer.com/article/10.1007/s10815-018-1204-7)
+
+# CNV学习笔记
+
+1. 概念
    + **CNV: copy number variation (deletions and duplications >50 bp).**<br>[Caspar S M, Dubacher N, Kopps A M, et al. Clinical sequencing: from raw data to diagnosis with lifetime value[J]. Clinical genetics, 2018, 93(3): 508-519.](https://onlinelibrary.wiley.com/doi/full/10.1111/cge.13190) <br>
 
    + **CNV refers to an intermediate scale structural variant, with copy number changes ranging from 1 Kb to 5 Mb of DNA**<br>
@@ -45,6 +50,20 @@
    + **Deletions were defined by a mean ratio of 0.8 (3/4 alleles), whereas duplications were defined by a ratio of 1.2 (5/4 alleles)**
    
    + **high copy number calls expected to have >0.85,and high copy number loss <-1.25**<br>[Chaubey A, Shenoy S, Mathur A, et al. Low Pass-Genome Sequencing: Validation and diagnostic utility from 409 clinical cases of low-pass genome sequencing for the detection of copy number variants (CNVs) to replace constitutional microarray[J]. The Journal of Molecular Diagnostics, 2020.](https://pubmed.ncbi.nlm.nih.gov/32344035/)
-   
-6. 对于靶向panel，关于CNV使用dragen以及建立PoN的处理可以参考以下文献<br> 
-   [Patel B, Parets S, Akana M, et al. Comprehensive genetic testing for female and male infertility using next-generation sequencing[J]. Journal of assisted reproduction and genetics, 2018, 35(8): 1489-1496.](https://link.springer.com/article/10.1007/s10815-018-1204-7)
+
+2. 评估CNV算法
+
+   + We can run [EvaluateCNV](https://github.com/Illumina/canvas) to produce recall and precision metrics for CNV.
+
+   + Download the standard [NA12878](http://dgv.tcag.ca/dgv/app/home) CNV data from DGV database(>50bp).
+
+   + 基于CNV的注释数据库https://decipher.sanger.ac.uk：
+
+   + 基于[clinvar](https://ftp.ncbi.nlm.nih.gov/pub/clinvar/tab_delimited/variant_summary.txt.gz)的CNV数据库注释:关注pathogenic/ probably pathogenic去掉 “likely benign,” and “benign"保留VUS, variant of unknown significance
+
+   + 对于关联基因的筛选应包含： OMIM (Online Mendelian Inheritance in Man）以及ACMG list 56 medically actionable genes
+
+   + 拷贝数变异常用的软件：[CoNIFER](http://conifer.sourceforge.net/index.html)
+
+3. 关于CNV的一些说明可参考：
+   https://blog.goldenhelix.com/annotation-education-series-final-chapter-cnv-annotations/
