@@ -57,7 +57,7 @@
 
    + Download the standard [NA12878](http://dgv.tcag.ca/dgv/app/home) CNV data from DGV database(>50bp).
 
-   + 基于CNV的注释数据库https://decipher.sanger.ac.uk：
+   + 基于CNV的注释数据库[DECIPHER](https://decipher.sanger.ac.uk)
 
    + 基于[clinvar](https://ftp.ncbi.nlm.nih.gov/pub/clinvar/tab_delimited/variant_summary.txt.gz)的CNV数据库注释:关注pathogenic/ probably pathogenic去掉 “likely benign,” and “benign"保留VUS, variant of unknown significance
 
