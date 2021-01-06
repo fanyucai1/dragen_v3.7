@@ -15,10 +15,11 @@ if not os.path.exists(args.outdir):
     subprocess.check_call('mkdir -p %s'%(args.outdir),shell=True)
 for(root, dirs, files) in os.walk(args.indir):
     for file in files:
-        sample_name,file_result="","false"
+        sample_name=""
         ###################################################################CNV
         if re.search('.cnv.vcf.gz$',file):
             sample_name = file.split(".cnv.vcf.gz")[0]
+            file_result="false"
             file_in = gzip.open(os.path.join(root,file), 'rt')
             file_out =open(os.path.join(args.outdir, "%s.cnv.pass.vcf" % (sample_name)), "wt")
             for eachline in file_in:
@@ -39,6 +40,7 @@ for(root, dirs, files) in os.walk(args.indir):
         ###################################################################SNP+Indel
         if re.search('.hard-filtered.vcf.gz$',file):
             sample_name = file.split(".hard-filtered.vcf.gz")[0]
+            file_result = "false"
             file_in = gzip.open(os.path.join(root,file), 'rt')
             file_out =open(os.path.join(args.outdir, "%s.hard-filtered.pass.vcf" % (sample_name)), "wt")
             for eachline in file_in:
@@ -59,6 +61,7 @@ for(root, dirs, files) in os.walk(args.indir):
         ###################################################################SV
         if re.search('.sv.vcf.gz$',file):
             sample_name = file.split(".sv.vcf.gz")[0]
+            file_result = "false"
             file_in = gzip.open(os.path.join(root,file), 'rt')
             file_out =open(os.path.join(args.outdir, "%s.sv.pass.vcf" % (sample_name)), "wt")
             for eachline in file_in:
@@ -79,6 +82,7 @@ for(root, dirs, files) in os.walk(args.indir):
         ###################################################################repeat
         if re.search('.repeats.vcf.gz$',file):
             sample_name = file.split(".repeats.vcf.gz")[0]
+            file_result = "false"
             file_in = gzip.open(os.path.join(root,file), 'rt')
             file_out =open(os.path.join(args.outdir, "%s.repeats.pass.vcf" % (sample_name)), "wt")
             for eachline in file_in:

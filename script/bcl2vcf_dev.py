@@ -21,7 +21,9 @@ parser.add_argument("-ne","--normal_wes",help="exon normal list file")
 parser.add_argument("-nw","--normal_wgs",help="wgs normal list file")
 args=parser.parse_args()
 ##########################################################check once again
-python3=""
+python3 = subprocess.getoutput('which python3')
+if not re.search('python3',python3):
+    print("Not find python3,you should set the python3 directory in %s 24 line"%(sys.argv[0]))
 ##########################################################
 if not args.wes and not args.wgs:
     print("Erro:You must defined wes_sample.list or wgs_sample.list\n\n")
