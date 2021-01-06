@@ -50,12 +50,12 @@ wes_vcf,wgs_vcf="",""
 if args.wes:
     wes_vcf=out_path+"/wes_vcf"
     subprocess.check_call("mkdir -p %s"%(wes_vcf),shell=True)
-    str_wes=core.tgex_run.run(args.wes)
+    str_wes=core.parse_samplelist.run(args.wes)
 
 if args.wgs:
     wgs_vcf=out_path+"/wgs_vcf"
     subprocess.check_call("mkdir -p %s"%(wgs_vcf),shell=True)
-    str_wgs = core.tgex_run.run(args.wgs)
+    str_wgs = core.parse_samplelist.run(args.wgs)
 #########################################################fastq2vcf
 sample_name,file2="",""
 for(root, dirs, files) in os.walk(fastq_dir):

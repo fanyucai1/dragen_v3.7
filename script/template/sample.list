@@ -1,0 +1,2 @@
+#Sample_ID,snvVcf,cnvVcf,svVcf,patientId,patientName,sampleRelation,sampleTarget
+A,B,C,D,E,F,G,H
