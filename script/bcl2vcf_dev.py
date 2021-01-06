@@ -91,10 +91,9 @@ if args.wes:
                             tgex_script+=" --snvVcf %s "%(os.path.join(root,file))
                         if re.search('.cnv.pass.vcf.gz$',file):
                             tgex_script+=" --cnvVcf %s "%(os.path.join(root,file))
-                        print(tgex_script)
-                        subprocess.check_call(tgex_script, shell=True)
+            subprocess.check_call(tgex_script, shell=True)
 if args.wgs:
-    core.result_parse.run(wgs_vcf,"%s.wgs"%(localtime),out_path)#output total matri
+    core.result_parse.run(wgs_vcf,"%s.wgs"%(localtime),out_path)#output total matrix
     core.copy2vcf.run(wgs_vcf, "%s/combine_wgs_vcf/" % (out_path))#copy pass vcf to one directoy
     #########################################################maybe run tgex
     for sample_name in fastq2vcf_wgs_par:
@@ -109,7 +108,6 @@ if args.wgs:
                             tgex_script += " --snvVcf %s " % (os.path.join(root, file))
                         if re.search('.cnv.pass.vcf.gz$', file):
                             tgex_script += " --cnvVcf %s " % (os.path.join(root, file))
-                        print(tgex_script)
-                        subprocess.check_call(tgex_script,shell=True)
+            subprocess.check_call(tgex_script,shell=True)
 #########################################################
 print("Done")
