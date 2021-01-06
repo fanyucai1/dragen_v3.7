@@ -1,3 +1,4 @@
+import os
 for i in "pyty":
     if i=="y":
         continue
@@ -5,3 +6,4 @@ for i in "pyty":
         print(i)
 
 print("abc")
+print(os.path.abspath(__file__))

@@ -21,7 +21,7 @@ parser.add_argument("-ne","--normal_wes",help="exon normal list file")
 parser.add_argument("-nw","--normal_wgs",help="wgs normal list file")
 args=parser.parse_args()
 ##########################################################check once again
-tgex_script="/usr/bin/python3 /staging/Tgex/tgex_uploadSamples.py --config /staging/Tgex/tgex.config.yml"
+python3=""
 ##########################################################
 if not args.wes and not args.wgs:
     print("Erro:You must defined wes_sample.list or wgs_sample.list\n\n")
@@ -76,16 +76,43 @@ for(root, dirs, files) in os.walk(fastq_dir):
                     else:
                         core.wgs.run(args.ref, R1, R2, "%s/%s"%(wgs_vcf,sample_name), sample_name)
                         continue
-#########################################################output total matrix
+#########################################################
 if args.wes:
-    core.result_parse.run(wes_vcf,"%s.wes"%(localtime),args.outdir)
+    core.result_parse.run(wes_vcf,"%s.wes"%(localtime),args.outdir)#output total matrix
+    core.copy2vcf.run(wgs_vcf,"%s/combine_wes_vcf/"%(args.outdir))#copy pass vcf to one directoy
+    ##############################################################maybe run tgex
+    for sample_name in fastq2vcf_wes_par:
+        if fastq2vcf_wes_par[sample_name]!="false":
+            tgex_script = "%s %s/Tgex/tgex_uploadSamples.py --config %s/Tgex/tgex.config.yml " % (python3, dir_name, dir_name)
+            for (root,dirs,files) in os.walk("%s/combine_wes_vcf/"%(args.outdir)):
+                for file in files:
+                    if re.search(sample_name,file):
+                        if re.search('.sv.pass.vcf.gz$',file):
+                            tgex_script+=" --svVcf %s "%(os.path.join(root,file))
+                        if re.search('.hard-filtered.pass.vcf.gz$',file):
+                            tgex_script+=" --snvVcf %s "%(os.path.join(root,file))
+                        if re.search('.cnv.pass.vcf.gz$',file):
+                            tgex_script+=" --cnvVcf %s "%(os.path.join(root,file))
+            subprocess.check_call(tgex_script, shell=True)
+
 if args.wgs:
-    core.result_parse.run(wgs_vcf,"%s.wgs"%(localtime),args.outdir)
-#########################################################copy2vcf and upload Tgex
-
-
-
-
+    core.result_parse.run(wgs_vcf,"%s.wgs"%(localtime),args.outdir)#output total matri
+    core.copy2vcf.run(wgs_vcf, "%s/combine_wgs_vcf/" % (args.outdir))#copy pass vcf to one directoy
+    #########################################################maybe run tgex
+    for sample_name in fastq2vcf_wgs_par:
+        if fastq2vcf_wgs_par[sample_name] != "false":
+            tgex_script = "%s %s/Tgex/tgex_uploadSamples.py --config %s/Tgex/tgex.config.yml " % (python3, dir_name, dir_name)
+            for (root, dirs, files) in os.walk("%s/combine_wgs_vcf/" % (args.outdir)):
+                for file in files:
+                    if re.search(sample_name, file):
+                        if re.search('.sv.pass.vcf.gz$', file):
+                            tgex_script += " --svVcf %s " % (os.path.join(root, file))
+                        if re.search('.hard-filtered.pass.vcf.gz$', file):
+                            tgex_script += " --snvVcf %s " % (os.path.join(root, file))
+                        if re.search('.cnv.pass.vcf.gz$', file):
+                            tgex_script += " --cnvVcf %s " % (os.path.join(root, file))
+            subprocess.check_call(tgex_script,shell=True)
+#########################################################
 
 
 
