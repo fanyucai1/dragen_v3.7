@@ -17,11 +17,11 @@
 
     * wgs
 
-          python3 bcl2vcf.py -i bcl/ -g wgs.list -s SampleSheet.csv -r /staging/reference/hg19_v8/ -o /output/ -ne normal_wgs.list
+          python3 bcl2vcf.py -i bcl/ -g wgs.list -s SampleSheet.csv -r /staging/reference/hg19_v8/ -o /output/ -ng normal_wgs.list
     * wes
 
-          python3 bcl2vcf.py -i bcl/ -e exom.list -s SampleSheet.csv -b TruSeq_Exome_TargetedRegions_v1.2.bed -r /staging/reference/hg19_v8/ -o /output/ -nw normal_wes.list
+          python3 bcl2vcf.py -i bcl/ -e exom.list -s SampleSheet.csv -b TruSeq_Exome_TargetedRegions_v1.2.bed -r /staging/reference/hg19_v8/ -o /output/ -ne normal_wes.list
   
     * wes+wgs
 
-          python3 bcl2vcf.py -i bcl/ -g wgs.list -e exom.list -s SampleSheet.csv -b TruSeq_Exome_TargetedRegions_v1.2.bed -r /staging/reference/hg19_v8/ -o /output/
+          python3 bcl2vcf.py -i bcl/ -g wgs.list -e exom.list -s SampleSheet.csv -b TruSeq_Exome_TargetedRegions_v1.2.bed -r /staging/reference/hg19_v8/ -o /output/ -ng normal_wgs.list -ne normal_wes.list

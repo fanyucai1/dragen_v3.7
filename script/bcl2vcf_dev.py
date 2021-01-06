@@ -16,7 +16,7 @@ parser.add_argument("-b","--bed",help="bed file")
 parser.add_argument("-g","--wgs",help="wgs sample list")
 parser.add_argument("-o","--outdir",help="output directory")
 parser.add_argument("-ne","--normal_wes",help="exon normal list file")
-parser.add_argument("-nw","--normal_wgs",help="wgs normal list file")
+parser.add_argument("-ng","--normal_wgs",help="wgs normal list file")
 args=parser.parse_args()
 ##########################################################check once again
 python3 = subprocess.getoutput('which python3')
