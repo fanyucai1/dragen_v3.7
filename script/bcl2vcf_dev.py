@@ -47,14 +47,12 @@ subprocess.check_call("mkdir -p %s"%(fastq_dir),shell=True)
 #########################################################run bcl2fastq
 core.bcl2fastq.run(args.samplesheet,args.indir,fastq_dir)
 #########################################################parse sample list and mkdir wes/wgs vcf output directory
-fastq2vcf_wes_par,fastq2vcf_wgs_par,wes_vcf,wgs_vcf,sample_num={},{},"","",0
+fastq2vcf_wes_par,fastq2vcf_wgs_par,wes_vcf,wgs_vcf={},{},"",""
 if args.wes:
-    sample_num+=1
     fastq2vcf_wes_par=core.parse_samplelist.run(args.wes)
     wes_vcf = out_path + "/wes_vcf"
     subprocess.check_call("mkdir -p %s" % (wes_vcf), shell=True)
 if args.wgs:
-    sample_num += 1
     wgs_vcf = out_path + "/wgs_vcf"
     subprocess.check_call("mkdir -p %s" % (wgs_vcf), shell=True)
     fastq2vcf_wgs_par=core.parse_samplelist.run(args.wgs)
@@ -68,19 +66,14 @@ if args.wgs:
                     if re.search(sample_name,R1) and not os.path.exists("%s/%s/%s.time_metrics.csv"%(wes_vcf,sample_name,sample_name)):
                         if args.normal_wes:
                             core.wes_PoN.run(args.ref,R1,R2,"%s/%s"%(wes_vcf,sample_name),sample_name,args.bed,args.normal_wes)
-                            continue
                         else:
                             core.wes.run(args.ref,R1,R2,"%s/%s"%(wes_vcf,sample_name),sample_name,args.bed)
-                            continue
                 for sample_name in fastq2vcf_wgs_par:
                     if re.search(sample_name, R1) and not os.path.exists("%s/%s/%s.time_metrics.csv"%(wgs_vcf,sample_name,sample_name)):
                         if args.normal_wgs:
                             core.wgs_PoN.run(args.ref, R1, R2, "%s/%s"%(wgs_vcf,sample_name), sample_name,args.normal_wgs)
-                            continue
                         else:
                             core.wgs.run(args.ref, R1, R2, "%s/%s"%(wgs_vcf,sample_name), sample_name)
-                            continue
-
 #########################################################
 """
 if args.wes:
