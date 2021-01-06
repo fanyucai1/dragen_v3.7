@@ -3,11 +3,11 @@
 #version 1.0
 import os
 import sys
+import subprocess
 
 def run(input_dir,prefix,output_dir):
     if not os.path.exists(output_dir):
-        os.makedirs("%s" % (output_dir))
-
+        subprocess.check_call("mkdir -p %s"%(output_dir),shell=True)
     outfile = open("%s/%s.tsv" % (output_dir, prefix), "w")
     outfile.write(
         "Sample name\tTotal reads\tTotal bases\tQ30(%)\tMapping(%)\tInsert length\tDuplication(%)\tCapture rate(%)\tMean coverage(X)\t20X coverage(%)\t50X coverage(%)\t100X coverage(%)\tUniformity of coverage (PCT > 0.2*mean)\n")
