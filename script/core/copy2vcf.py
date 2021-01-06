@@ -103,5 +103,5 @@ if __name__=="__main__":
     if len(sys.argv)==3:
         run(sys.argv[1],sys.argv[2])
     else:
-        print("\nusage:python3 /dragen_result_dir/ /output_directoy/\n")
+        print("\nusage:python3 %s /dragen_result_dir/ /output_directoy/\n"%(sys.argv[0]))
         print("Email:yucai.fan@illumina.com")
