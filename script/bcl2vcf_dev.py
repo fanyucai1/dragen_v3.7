@@ -57,6 +57,8 @@ if args.wgs:
     subprocess.check_call("mkdir -p %s" % (wgs_vcf), shell=True)
     fastq2vcf_wgs_par=core.parse_samplelist.run(args.wgs)
 #########################################################run fastq2vcf
+print(fastq2vcf_wgs_par)
+print(fastq2vcf_wes_par)
 for(root, dirs, files) in os.walk(fastq_dir):
     for file in files:
         if re.search(".fastq.gz$",file) and re.search('_R1_',file):
