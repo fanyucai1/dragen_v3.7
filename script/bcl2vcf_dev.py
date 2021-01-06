@@ -82,7 +82,7 @@ if args.wes:
     for sample_name in fastq2vcf_wes_par:
         if fastq2vcf_wes_par[sample_name]!="false":
             tgex_script = "%s %s/Tgex/tgex_uploadSamples.py --config %s/Tgex/tgex.config.yml " % (python3, dir_name, dir_name)
-            for (root,dirs,files) in os.walk("%s/combine_wes_vcf/"%(args.outdir)):
+            for (root,dirs,files) in os.walk("%s/combine_wes_vcf/"%(out_path)):
                 for file in files:
                     if re.search(sample_name,file):
                         if re.search('.sv.pass.vcf.gz$',file):
@@ -91,8 +91,8 @@ if args.wes:
                             tgex_script+=" --snvVcf %s "%(os.path.join(root,file))
                         if re.search('.cnv.pass.vcf.gz$',file):
                             tgex_script+=" --cnvVcf %s "%(os.path.join(root,file))
-            subprocess.check_call(tgex_script, shell=True)
-
+                        print(tgex_script)
+                        subprocess.check_call(tgex_script, shell=True)
 if args.wgs:
     core.result_parse.run(wgs_vcf,"%s.wgs"%(localtime),out_path)#output total matri
     core.copy2vcf.run(wgs_vcf, "%s/combine_wgs_vcf/" % (out_path))#copy pass vcf to one directoy
@@ -100,7 +100,7 @@ if args.wgs:
     for sample_name in fastq2vcf_wgs_par:
         if fastq2vcf_wgs_par[sample_name] != "false":
             tgex_script = "%s %s/Tgex/tgex_uploadSamples.py --config %s/Tgex/tgex.config.yml " % (python3, dir_name, dir_name)
-            for (root, dirs, files) in os.walk("%s/combine_wgs_vcf/" % (args.outdir)):
+            for (root, dirs, files) in os.walk("%s/combine_wgs_vcf/" % (out_path)):
                 for file in files:
                     if re.search(sample_name, file):
                         if re.search('.sv.pass.vcf.gz$', file):
@@ -109,7 +109,7 @@ if args.wgs:
                             tgex_script += " --snvVcf %s " % (os.path.join(root, file))
                         if re.search('.cnv.pass.vcf.gz$', file):
                             tgex_script += " --cnvVcf %s " % (os.path.join(root, file))
-            subprocess.check_call(tgex_script,shell=True)
+                        print(tgex_script)
+                        subprocess.check_call(tgex_script,shell=True)
 #########################################################
 print("Done")
-
