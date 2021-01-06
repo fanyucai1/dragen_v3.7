@@ -91,6 +91,7 @@ if args.wes:
                             tgex_script+=" --snvVcf %s "%(os.path.join(root,file))
                         if re.search('.cnv.pass.vcf.gz$',file):
                             tgex_script+=" --cnvVcf %s "%(os.path.join(root,file))
+            print(tgex_script)
             subprocess.check_call(tgex_script, shell=True)
 if args.wgs:
     core.result_parse.run(wgs_vcf,"%s.wgs"%(localtime),out_path)#output total matrix
@@ -108,6 +109,7 @@ if args.wgs:
                             tgex_script += " --snvVcf %s " % (os.path.join(root, file))
                         if re.search('.cnv.pass.vcf.gz$', file):
                             tgex_script += " --cnvVcf %s " % (os.path.join(root, file))
+            print(tgex_script)
             subprocess.check_call(tgex_script,shell=True)
 #########################################################
 print("Done")

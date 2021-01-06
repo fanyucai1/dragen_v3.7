@@ -89,10 +89,10 @@ def run(indir,outdir):
                 file_in.close()
                 file_out.close()
                 if file_result=="false":
-                    subprocess.check_call('rm -rf %s' % (os.path.join(outdir, "%s.repats.pass.vcf" % (sample_name))),
+                    subprocess.check_call('rm -rf %s' % (os.path.join(outdir, "%s.repeats.pass.vcf" % (sample_name))),
                                           shell=True)
                 else:
-                    if not os.path.exists(os.path.join(outdir, "%s.repats.pass.vcf.gz" % (sample_name))):
+                    if not os.path.exists(os.path.join(outdir, "%s.repeats.pass.vcf.gz" % (sample_name))):
                         subprocess.check_call('gzip -v %s'%(os.path.join(outdir, "%s.repeats.pass.vcf" % (sample_name))),shell=True)
             ###################################################################
             if re.search('._coverage_metrics.csv$',file) or re.search('.fastqc_metrics.csv$',file) or re.search('mapping_metrics.csv$',file):
