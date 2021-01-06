@@ -9,17 +9,19 @@ def run(samplelist):
         num+=1
         array = re.split('[\s,]', line)
         if num==1:
-            for i in range(1,len(array)):
-                par_name.append(array[1])#默认第一行为参数名称
+            if len(array)>1:
+                for i in range(0,len(array)):
+                    par_name.append(array[i])#获得参数名
         else:
+            sample_par[array[0]]=""
             if len(array)>1:
                 for i in range(1, len(array)):
                     sample_par[array[0]]+="--"+par_name[i]+" "
                     sample_par[array[0]]+=array[i]+" "
             else:
-                str[array[0]]="false"
+                sample_par[array[0]]="false"
     infile.close()
-    return str
+    return sample_par
 
 if __name__=="__main__":
     if len(sys.argv)!=2:
