@@ -58,35 +58,27 @@ if args.wgs:
     wgs_vcf = out_path + "/wgs_vcf"
     subprocess.check_call("mkdir -p %s" % (wgs_vcf), shell=True)
     fastq2vcf_wgs_par=core.parse_samplelist.run(args.wgs)
-#########################################################log file
-log_outfile=open("%s/log.out"%(out_path),"w")
 #########################################################run fastq2vcf
-process_num=subprocess.getoutput('wc -l %s/log.out'%out_path)
-if not re.search(str(sample_num),re.split('\s',process_num)[0]):
     for(root, dirs, files) in os.walk(fastq_dir):
         for file in files:
             if re.search(".fastq.gz$",file) and re.search('_R1_',file):
                 R1=os.path.join(root,file)
                 R2=R1.replace("_R1_","_R2_")
                 for sample_name in fastq2vcf_wes_par:
-                    if re.search(sample_name,R1):
+                    if re.search(sample_name,R1) and not os.path.exists("%s/%s/%s.time_metrics.csv"%(wes_vcf,sample_name,sample_name)):
                         if args.normal_wes:
                             core.wes_PoN.run(args.ref,R1,R2,"%s/%s"%(wes_vcf,sample_name),sample_name,args.bed,args.normal_wes)
-                            log_outfile.write("%s run wes PoN done."%(sample_name))
                             continue
                         else:
                             core.wes.run(args.ref,R1,R2,"%s/%s"%(wes_vcf,sample_name),sample_name,args.bed)
-                            log_outfile.write("%s run wes done." % (sample_name))
                             continue
                 for sample_name in fastq2vcf_wgs_par:
-                    if re.search(sample_name, R1):
+                    if re.search(sample_name, R1) and not os.path.exists("%s/%s/%s.time_metrics.csv"%(wgs_vcf,sample_name,sample_name)):
                         if args.normal_wgs:
                             core.wgs_PoN.run(args.ref, R1, R2, "%s/%s"%(wgs_vcf,sample_name), sample_name,args.normal_wgs)
-                            log_outfile.write("%s run wgs PoN done." % (sample_name))
                             continue
                         else:
                             core.wgs.run(args.ref, R1, R2, "%s/%s"%(wgs_vcf,sample_name), sample_name)
-                            log_outfile.write("%s run wes done." % (sample_name))
                             continue
 
 #########################################################
@@ -128,6 +120,5 @@ if args.wgs:
             subprocess.check_call(tgex_script,shell=True)
 #########################################################
 """
-
-log_outfile.close()
+print("Done")
 
