@@ -79,6 +79,7 @@ for(root, dirs, files) in os.walk(fastq_dir):
                         core.wgs.run(args.ref, R1, R2, "%s/%s"%(wgs_vcf,sample_name), sample_name)
                         continue
 #########################################################
+"""
 if args.wes:
     core.result_parse.run(wes_vcf,"%s.wes"%(localtime),args.outdir)#output total matrix
     core.copy2vcf.run(wgs_vcf,"%s/combine_wes_vcf/"%(args.outdir))#copy pass vcf to one directoy
@@ -115,6 +116,7 @@ if args.wgs:
                             tgex_script += " --cnvVcf %s " % (os.path.join(root, file))
             subprocess.check_call(tgex_script,shell=True)
 #########################################################
+"""
 
 
 

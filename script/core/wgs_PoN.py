@@ -1,8 +1,10 @@
 import sys
 import subprocess
-
+import os
 
 def run(ref, R1, R2, outdir, prefix,list):
+    if not os.path.exists(outdir):
+        subprocess.check_call("mkdir -p %s"%outdir,shell=True)
     cmd="dragen -f -r %s -1 %s -2 %s "%(ref,R1,R2)
     cmd+=" --RGID Illumina_RGID --RGSM %s "%(prefix)
     cmd+=" --output-directory %s --output-file-prefix %s "%(outdir,prefix)

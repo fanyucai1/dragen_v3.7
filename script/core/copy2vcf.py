@@ -7,12 +7,7 @@ import re
 import gzip
 import sys
 
-parse=argparse.ArgumentParser("Copy files to new directory.\n")
-parse.add_argument("-i","--indir",help="input directory",required=True)
-parse.add_argument("-o","--outdir",help="output directory",required=True)
-args=parse.parse_args()
 def run(indir,outdir):
-    
     if not os.path.exists(outdir):
         subprocess.check_call('mkdir -p %s'%(outdir),shell=True)
     for(root, dirs, files) in os.walk(indir):
