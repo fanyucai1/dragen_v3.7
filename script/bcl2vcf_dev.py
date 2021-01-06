@@ -81,7 +81,7 @@ if args.wes:
     ##############################################################maybe run tgex
     for sample_name in fastq2vcf_wes_par:
         if fastq2vcf_wes_par[sample_name]!="false":
-            tgex_script = "%s %s/Tgex/tgex_uploadSamples.py --config %s/Tgex/tgex.config.yml " % (python3, dir_name, dir_name)
+            tgex_script = "%s %s/Tgex/tgex_uploadSamples.py --config %s/Tgex/tgex.config.yml %s " % (python3, dir_name, dir_name,fastq2vcf_wes_par[sample_name])
             for (root,dirs,files) in os.walk("%s/combine_wes_vcf/"%(out_path)):
                 for file in files:
                     if re.search(sample_name,file):
@@ -99,7 +99,7 @@ if args.wgs:
     #########################################################maybe run tgex
     for sample_name in fastq2vcf_wgs_par:
         if fastq2vcf_wgs_par[sample_name] != "false":
-            tgex_script = "%s %s/Tgex/tgex_uploadSamples.py --config %s/Tgex/tgex.config.yml " % (python3, dir_name, dir_name)
+            tgex_script = "%s %s/Tgex/tgex_uploadSamples.py --config %s/Tgex/tgex.config.yml %s " % (python3, dir_name, dir_name,fastq2vcf_wgs_par[sample_name])
             for (root, dirs, files) in os.walk("%s/combine_wgs_vcf/" % (out_path)):
                 for file in files:
                     if re.search(sample_name, file):
