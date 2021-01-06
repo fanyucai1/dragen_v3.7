@@ -97,7 +97,6 @@ def run(indir,outdir):
             ###################################################################
             if re.search('._coverage_metrics.csv$',file) or re.search('.fastqc_metrics.csv$',file) or re.search('mapping_metrics.csv$',file):
                 subprocess.check_call('cp %s %s' % (os.path.join(root, file), outdir), shell=True)
-    print("The process done.")
 
 if __name__=="__main__":
     if len(sys.argv)==3:
