@@ -3,21 +3,21 @@ import sys
 
 def run(samplelist):
     infile=open(samplelist,"r")
-    tgex_par,num,str=[],0,{}
+    par_name,num,sample_par=[],0,{}
     for line in infile:
         line=line.strip()
         num+=1
         array = re.split('[\s,]', line)
         if num==1:
             for i in range(1,len(array)):
-                tgex_par.append(array[1])
+                par_name.append(array[1])#默认第一行为参数名称
         else:
             if len(array)>1:
                 for i in range(1, len(array)):
-                    str[array[0]]+="--"+tgex_par[i]+" "
-                    str[array[0]]+=array[i]+" "
+                    sample_par[array[0]]+="--"+par_name[i]+" "
+                    sample_par[array[0]]+=array[i]+" "
             else:
-                str[array[0]]=array[0]
+                str[array[0]]="false"
     infile.close()
     return str
 
