@@ -78,8 +78,8 @@ for(root, dirs, files) in os.walk(fastq_dir):
                         core.wgs.run(args.ref, R1, R2, "%s/%s"%(wgs_vcf,sample_name), sample_name)
 #########################################################
 if args.wes:
-    core.result_parse.run(wes_vcf,"%s.wes"%(localtime),args.outdir)#output total matrix
-    core.copy2vcf.run(wgs_vcf,"%s/combine_wes_vcf/"%(args.outdir))#copy pass vcf to one directoy
+    core.result_parse.run(wes_vcf,"%s.wes"%(localtime),out_path)#output total matrix
+    core.copy2vcf.run(wgs_vcf,"%s/combine_wes_vcf/"%(out_path))#copy pass vcf to one directoy
     ##############################################################maybe run tgex
     for sample_name in fastq2vcf_wes_par:
         if fastq2vcf_wes_par[sample_name]!="false":
@@ -96,8 +96,8 @@ if args.wes:
             subprocess.check_call(tgex_script, shell=True)
 
 if args.wgs:
-    core.result_parse.run(wgs_vcf,"%s.wgs"%(localtime),args.outdir)#output total matri
-    core.copy2vcf.run(wgs_vcf, "%s/combine_wgs_vcf/" % (args.outdir))#copy pass vcf to one directoy
+    core.result_parse.run(wgs_vcf,"%s.wgs"%(localtime),out_path)#output total matri
+    core.copy2vcf.run(wgs_vcf, "%s/combine_wgs_vcf/" % (out_path))#copy pass vcf to one directoy
     #########################################################maybe run tgex
     for sample_name in fastq2vcf_wgs_par:
         if fastq2vcf_wgs_par[sample_name] != "false":

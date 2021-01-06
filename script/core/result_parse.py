@@ -6,6 +6,7 @@ import sys
 import subprocess
 
 def run(input_dir,prefix,output_dir):
+    print(output_dir)
     if not os.path.exists(output_dir):
         subprocess.check_call("mkdir -p %s"%(output_dir),shell=True)
     outfile = open("%s/%s.tsv" % (output_dir, prefix), "w")
