@@ -79,7 +79,7 @@ for(root, dirs, files) in os.walk(fastq_dir):
 #########################################################
 if args.wes:
     core.result_parse.run(wes_vcf,"%s.wes"%(localtime),out_path)#output total matrix
-    core.copy2vcf.run(wgs_vcf,"%s/combine_wes_vcf/"%(out_path))#copy pass vcf to one directoy
+    core.copy2vcf.run(wes_vcf,"%s/combine_wes_vcf/"%(out_path))#copy pass vcf to one directoy
     ##############################################################maybe run tgex
     for sample_name in fastq2vcf_wes_par:
         if fastq2vcf_wes_par[sample_name]!="false":
