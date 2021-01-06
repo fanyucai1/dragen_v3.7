@@ -1,7 +1,27 @@
 ## bcl2vcf.py
 **适用范围：从测序仪器下机的WGS与WES样本**
 
-    python3 bcl2vc.py -r <ref> -i <bcl_directory> -s <SampleSheet.csv> -e wes.list -g wgs.list -o <output_directory>
+    usage: This script run from bcl to vcf.
+
+     [-h] -i INDIR -s SAMPLESHEET -r REF [-e WES] [-b BED] [-g WGS] [-o OUTDIR]
+                                              [-ne NORMAL_WES] [-nw NORMAL_WGS]
+    
+    optional arguments:
+      -h, --help            show this help message and exit
+      -i INDIR, --indir INDIR
+                            bcl directory must be given(force)
+      -s SAMPLESHEET, --samplesheet SAMPLESHEET
+                            sample sheet must be given(force)
+      -r REF, --ref REF     reference directory must be given(force)
+      -e WES, --wes WES     exon sample list
+      -b BED, --bed BED     bed file
+      -g WGS, --wgs WGS     wgs sample list
+      -o OUTDIR, --outdir OUTDIR
+                            output directory
+      -ne NORMAL_WES, --normal_wes NORMAL_WES
+                            exon normal list file
+      -nw NORMAL_WGS, --normal_wgs NORMAL_WGS
+                            wgs normal list file
 
   + 参数说明:<br>
       * -r 参考index**文件夹**<br>
