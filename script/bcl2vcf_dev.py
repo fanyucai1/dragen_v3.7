@@ -51,7 +51,7 @@ if args.wes:
     fastq2vcf_wes_par=core.run_tgex.run(args.wes)
     wes_vcf = out_path + "/wes_vcf"
     subprocess.check_call("mkdir -p %s" % (wes_vcf), shell=True)
-    core.wes.run(args.ref, args.wes, fastq_dir, wes_vcf,args.bed,args.normal_wes)#fastq2vcf
+    core.germline_fastq2vcf.run(args.ref, args.wes, fastq_dir, wes_vcf, args.bed, args.normal_wes)#fastq2vcf
     core.result_parse.run(wes_vcf, "%s.wes" % (localtime), out_path)  # output total matrix
     core.copy2vcf.run(wes_vcf, "%s/combine_wes_vcf/" % (out_path))  # copy pass vcf to one directoy
     if args.cofig!="false":
