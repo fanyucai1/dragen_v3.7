@@ -48,7 +48,6 @@ core.bcl2fastq.run(args.samplesheet,args.indir,fastq_dir)
 #########################################################parse sample list and mkdir wes/wgs vcf output directory
 fastq2vcf_wes_par,fastq2vcf_wgs_par,wes_vcf,wgs_vcf={},{},"",""
 if args.wes:
-    fastq2vcf_wes_par=core.run_tgex.run(args.wes)
     wes_vcf = out_path + "/wes_vcf"
     subprocess.check_call("mkdir -p %s" % (wes_vcf), shell=True)
     #fastq2vcf
