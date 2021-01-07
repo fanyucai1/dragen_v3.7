@@ -87,11 +87,11 @@ Table of Contents
 
 # Reference
 
-* [wgs/wes](Documents/reference.md)
-* [血液病](Documents/reference.md)
-* [科研](Documents/reference.md)
-* [somatic](Documents/reference.md)
-* [评估变异检测性能参考文献以及工具](Documents/reference.md)
+* [wgs/wes](Documents/README.md)
+* [血液病](Documents/README.md)
+* [科研](Documents/README.md)
+* [somatic](Documents/README.md)
+* [评估变异检测性能参考文献以及工具](Documents/README.md)
 
 # Appendix
 
