@@ -1,3 +1,13 @@
+Table of Contents
+=================
+
+   * [Regions of homozygosity（ROH）](#regions-of-homozygosityroh)
+   * [Force Genotyping](#force-genotyping)
+   * [single cell](#single-cell)
+   * [reference](#reference)
+
+
+
 # Regions of homozygosity（ROH）
 
 * 纯和缺失：一对同源染色体都发生了相同的缺失，含有这种同源染色体的生物称为缺失纯合子
@@ -14,10 +24,6 @@
 |At a position with no coverage|./.|
 |At a position with coverage but no reads supporting ALT allele|0/0|
 |At a position with coverage and reads supporting ALT allele|0/0 or 0/1 or 1/1 or 1/2|
-
-# 线粒体
-
-一个哺乳动物细胞里含有100个线粒体，一个线粒体包含2-10个线粒体DNA
 
 # single cell
 
