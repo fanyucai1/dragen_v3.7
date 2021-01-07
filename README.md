@@ -2,18 +2,24 @@
 
 ## 资料下载
 
-  + [用户使用手册](Documents/User-Guide.pdf)
-  + [dragen-v3-7软件下载链接](https://sapac.support.illumina.com/downloads/illumina-dragen-v3-7-installers.html)
-  + [MultiQC安装包](Documents/MultiQC-master.zip)
-  + [dragen产品介绍.pdf](Documents/dragen产品介绍.pdf)
-  + [开源压缩软件文档.pdf](Documents/开源压缩软件文档.pdf)
-  + [dragen-压缩命令行说明.pdf](Documents/dragen-压缩命令行说明.pdf)
-  + [dragen-TSO500-ctDNA数据分析文档.pdf](Documents/dragen-TSO500-ctDNA分析文档.pdf)
-  + [dragen_v3.7更新说明文档.pdf](Documents/DRAGEN-v3.7更新说明文档.pdf)
-  + [dragen服务器安装说明文档.pdf](Documents/dragen_v3服务器场地准备和安装指南.pdf)
++   [用户使用手册](Documents/User-Guide.pdf)
++   [dragen-v3-7软件下载链接](https://sapac.support.illumina.com/downloads/illumina-dragen-v3-7-installers.html)
++   [MultiQC安装包](Documents/MultiQC-master.zip)
++   [dragen产品介绍.pdf](Documents/dragen产品介绍.pdf)
++   [开源压缩软件文档.pdf](Documents/开源压缩软件文档.pdf)
++   [dragen-压缩命令行说明.pdf](Documents/dragen-压缩命令行说明.pdf)
++   [dragen-TSO500-ctDNA数据分析文档.pdf](Documents/dragen-TSO500-ctDNA分析文档.pdf)
++   [dragen_v3.7更新说明文档.pdf](Documents/DRAGEN-v3.7更新说明文档.pdf)
++   [dragen服务器安装说明文档.pdf](Documents/dragen_v3服务器场地准备和安装指南.pdf)
 
 ## quick start
-+ 统计dragen下机数据分析结果: [dragen_result.py](script/core)
+
++   一键运行bcl2fastq数据拆分:[bcl2fastq.py](script/core/bcl2fastq.py)
++   一键运行fastq文件到vcf:[germline_fastq2vcf.py.py](script/core/germline_fastq2vcf.py)
++   一键运行统计dragen数据分析结果:[result_parse.py](script/core/result_parse.py)
++   一键建立CNV的PoN基线文件:[build_PoN.py](script/core/build_PoN.py)
++   一键提取dragen分析结果中的PASS位点:[copy2vcf.py](script/core/copy2vcf.py)
++   一键上传vcf到Tgex网站:[run_tgex.py](script/core/run_tgex.py)
 
 ## input files
 
