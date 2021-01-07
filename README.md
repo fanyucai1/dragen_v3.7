@@ -1,7 +1,7 @@
 Table of Contents
 =================
 
-   * [Documents](Documents/README.md)
+   * [Documents](Documents/)
    * [Quick start](#quick-start)
    * [Input files](#input-files)
    * [Output files](#output-files)
