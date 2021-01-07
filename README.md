@@ -2,16 +2,16 @@ Table of Contents
 =================
 
    * [dragen](#dragen)
-      * [资料下载](#\xE8\xB5\x84\xE6\x96\x99\xE4\xB8\x8B\xE8\xBD\xBD)
+      * [Documents](Documents)
       * [quick start](#quick-start)
       * [input files](#input-files)
       * [output files](#output-files)
-      * [常见问题](#\xE5\xB8\xB8\xE8\xA7\x81\xE9\x97\xAE\xE9\xA2\x98)
-      * [参考文献](#\xE5\x8F\x82\xE8\x80\x83\xE6\x96\x87\xE7\x8C\xAE)
+      * [FAQ](FAQ)
+      * [reference](reference)
 
 # dragen
 
-## 资料下载
+## Documents
 
 +   [用户使用手册](Documents/User-Guide.pdf)
 +   [dragen-v3-7软件下载链接](https://sapac.support.illumina.com/downloads/illumina-dragen-v3-7-installers.html)
@@ -65,7 +65,7 @@ Table of Contents
   + **染色体倍型(适用全基因组):**      \<output prefix\>.ploidy.vcf.gz,\<output-file-prefix\>.ploidy_estimation_metrics.csv
 
 
-## 常见问题
+## FAQ
 
 1. 多种类型的bed文件有什么区别
 
@@ -99,7 +99,7 @@ Table of Contents
 
         echo 3 > /proc/sys/vm/drop_caches
 
-## 参考文献
+## reference
 
 * wgs/wes
   
