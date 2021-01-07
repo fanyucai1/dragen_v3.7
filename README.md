@@ -1,23 +1,12 @@
 Table of Contents
 =================
 
-   * [Documents](#documents)
+   * [Documents](Documents/README.md)
    * [Quick start](#quick-start)
    * [Input files](#input-files)
    * [Output files](#output-files)
    * [FAQ](#faq)
    * [Reference](#reference)
-# Documents
-
-+   [用户使用手册](Documents/User-Guide.pdf)
-+   [dragen-v3-7软件下载链接](https://sapac.support.illumina.com/downloads/illumina-dragen-v3-7-installers.html)
-+   [MultiQC安装包](Documents/MultiQC-master.zip)
-+   [dragen产品介绍.pdf](Documents/dragen产品介绍.pdf)
-+   [开源压缩软件文档.pdf](Documents/开源压缩软件文档.pdf)
-+   [dragen-压缩命令行说明.pdf](Documents/dragen-压缩命令行说明.pdf)
-+   [dragen-TSO500-ctDNA数据分析文档.pdf](Documents/dragen-TSO500-ctDNA分析文档.pdf)
-+   [dragen_v3.7更新说明文档.pdf](Documents/DRAGEN-v3.7更新说明文档.pdf)
-+   [dragen服务器安装说明文档.pdf](Documents/dragen_v3服务器场地准备和安装指南.pdf)
 
 # Quick start
 
