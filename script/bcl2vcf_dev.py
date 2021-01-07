@@ -23,6 +23,7 @@ args=parser.parse_args()
 python3 = subprocess.getoutput('which python3')
 if not re.search('python3',python3):
     print("Not find python3,you should set the python3 directory in %s 24 line"%(sys.argv[0]))
+    exit()
 ##########################################################
 if not args.wes and not args.wgs:
     print("Erro:You must defined wes_sample.list or wgs_sample.list\n\n")
