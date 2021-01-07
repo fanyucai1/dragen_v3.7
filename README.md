@@ -7,6 +7,7 @@ Table of Contents
    * [Output files](#output-files)
    * [FAQ](#faq)
    * [Reference](#reference)
+   * [Appendix](#Appendix)
 
 # Quick start
 
@@ -87,13 +88,9 @@ Table of Contents
 # Reference
 
 * [wgs/wes](Documents/reference/wgs_wes.md)
-
 * [血液病](Documents/reference/blood.md)
-
 * [科研](Documents/reference/research.md)
-
 * [somatic](Documents/reference/somatic.md)
-
 * [评估变异检测性能参考文献以及工具](Documents/reference/performance.md)
 
 # Appendix
