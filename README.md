@@ -1,17 +1,13 @@
 Table of Contents
 =================
 
-   * [dragen](#dragen)
-      * [Documents](Documents)
-      * [quick start](#quick-start)
-      * [input files](#input-files)
-      * [output files](#output-files)
-      * [FAQ](FAQ)
-      * [reference](reference)
-
-# dragen
-
-## Documents
+   * [Documents](#documents)
+   * [Quick start](#quick-start)
+   * [Input files](#input-files)
+   * [Output files](#output-files)
+   * [FAQ](#faq)
+   * [Reference](#reference)
+# Documents
 
 +   [用户使用手册](Documents/User-Guide.pdf)
 +   [dragen-v3-7软件下载链接](https://sapac.support.illumina.com/downloads/illumina-dragen-v3-7-installers.html)
@@ -23,7 +19,7 @@ Table of Contents
 +   [dragen_v3.7更新说明文档.pdf](Documents/DRAGEN-v3.7更新说明文档.pdf)
 +   [dragen服务器安装说明文档.pdf](Documents/dragen_v3服务器场地准备和安装指南.pdf)
 
-## quick start
+# Quick start
 
 +   一键运行bcl2fastq数据拆分:[bcl2fastq.py](script/core/bcl2fastq.py)
 +   一键运行fastq文件到vcf:[germline_fastq2vcf.py.py](script/core/germline_fastq2vcf.py)
@@ -32,7 +28,7 @@ Table of Contents
 +   一键提取dragen分析结果中的PASS位点:[copy2vcf.py](script/core/copy2vcf.py)
 +   一键上传vcf到Tgex网站:[run_tgex.py](script/core/run_tgex.py)
 
-## input files
+# Input files
 
 * BAM
   + **germline:** -b sample.bam
@@ -46,7 +42,7 @@ Table of Contents
   + **Tumor normal**
     + -1 sample.R1.fastq -2 sample.R2.fastq --tumor-fastq1 tumor.R1.fastq --tumor-fastq2 tumor.R2.fastq
 
-## output files
+# Output files
   + **SNV+Indel:**                \<output-file-prefix\>.hard-filtered.vcf.gz
   + **CNV:**                      \<output-file-prefix\>.cnv.vcf.gz
   + **repeat region:**            \<output-file-prefix\>.repeats.vcf.gz
@@ -65,7 +61,7 @@ Table of Contents
   + **染色体倍型(适用全基因组):**      \<output prefix\>.ploidy.vcf.gz,\<output-file-prefix\>.ploidy_estimation_metrics.csv
 
 
-## FAQ
+# FAQ
 
 1. 多种类型的bed文件有什么区别
 
@@ -99,7 +95,7 @@ Table of Contents
 
         echo 3 > /proc/sys/vm/drop_caches
 
-## reference
+# Reference
 
 * wgs/wes
   
