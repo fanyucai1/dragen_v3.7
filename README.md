@@ -65,7 +65,7 @@
 
 3. 第三方BAM输入Dragen报错，出现不兼容的情况
 
-    + 可使用bedtools将bam文件转化为fastq再重新输入dragen:https://bedtools.readthedocs.io/en/latest/content/tools/bamtofastq.html
+    + 可使用[bedtools](https://bedtools.readthedocs.io/en/latest/content/tools/bamtofastq.html) 将bam文件转化为fastq再重新输入dragen
     
     + 首先可以尝试将BAM文件直接输入到Dragen进行重新比对生产BAM
 
@@ -87,7 +87,6 @@
 5. 服务器清空缓存
 
         echo 3 > /proc/sys/vm/drop_caches
-
 
 ## 参考文献
 
