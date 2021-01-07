@@ -22,12 +22,12 @@
       -nw NORMAL_WGS, --normal_wgs NORMAL_WGS
                             wgs normal list file
 
-  * -r 参考index**文件夹**<br>
-  * -i 输入下机数据bcl**文件夹**<br>
-  * -s 输入samplesheet<br>
-  * -e 外显子样本[samplelist](./template)样本名称需于samplesheet中保持一致<br>
-      + -b 外显子bed文件与 **-e** 一起使用
-  * -g 全基因组样本[samplelist](./template)样本名称需于samplesheet中保持一致<br>
-  * -o 输出目录<br>
+  * -r 参考index文件夹(required)
+  * -i 输入下机数据bcl文件夹(required)
+  * -s 输入samplesheet(required)
+  * -e 外显子样本[samplelist](./template)样本名称需于samplesheet中保持一致
+  * -b 外显子bed文件与 **-e** 参数一起使用
+  * -g 全基因组样本[samplelist](./template)样本名称需于samplesheet中保持一致
+  * -o 输出目录
   * -ne 外显子正常样本PoN list
   * -nw 全基因组正常样本PoN list
