@@ -19,7 +19,7 @@
 
 一个哺乳动物细胞里含有100个线粒体，一个线粒体包含2-10个线粒体DNA
 
-# 单细胞
+# single cell
 
 [hg19_gtf](https://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/genes/)<br>
 [hg38_gtf](https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/genes)<br>
@@ -35,13 +35,13 @@
 
 # reference
 
-##血液病
+血液病
 
 [Short N J, Patel K P, Albitar M, et al. Targeted next-generation sequencing of circulating cell-free DNA vs bone marrow in patients with acute myeloid leukemia[J]. Blood Advances, 2020, 4(8): 1670-1677.](https://ashpublications.org/blood/article/132/Supplement%201/4212/275750/Targeted-Next-Generation-Sequencing-of-Cell-Free)
 
 [Vicente A, Patel B A, Gutierrez-Rodrigues F, et al. Eltrombopag monotherapy can improve hematopoiesis in patients with low to intermediate risk-1 myelodysplastic syndrome[J]. Haematologica, 2020.](https://haematologica.org/article/view/9761)
 
-##性能验证
+性能验证
 
 [Best practices for benchmarking germline small-variant calls in human genomes](https://www.nature.com/articles/s41587-019-0054-x)
 
@@ -53,7 +53,7 @@
 
 We can run [VCAT](https://www.illumina.com/products/by-type/informatics-products/basespace-sequence-hub/apps/variant-calling-assessment-tool.html) to produce recall and precision metrics for SNV and Indel.
 
-## 科研方向(GWAS+小麦基因组）
+科研方向(GWAS+小麦基因组）
 
 [Yoo S K, Kim C U, Kim H L, et al. NARD: whole-genome reference panel of 1779 Northeast Asians improves imputation accuracy of rare and low-frequency variants[J]. Genome medicine, 2019, 11(1): 1-10.](https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-019-0677-z)
 
@@ -61,7 +61,7 @@ We can run [VCAT](https://www.illumina.com/products/by-type/informatics-products
 
 [Triticum aestivum Assembly and Gene Annotation](https://plants.ensembl.org/Triticum_aestivum/Info/Annotation/)
 
-## WGS+WES
+WGS+WES
 
 [Wang H, Lu Y, Dong X, et al. Optimized trio genome sequencing (OTGS) as a first-tier genetic test in critically ill infants: practice in China[J]. Human Genetics, 2020, 139(4): 473-482.](https://link.springer.com/article/10.1007/s00439-019-02103-8)
 
@@ -71,7 +71,7 @@ We can run [VCAT](https://www.illumina.com/products/by-type/informatics-products
 
 [Jain A, Bhoyar R C, Pandhare K, et al. IndiGenomes: a comprehensive resource of genetic variants from over 1000 Indian genomes[J]. Nucleic Acids Research, 2020.](https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkaa923/5937082?login=true)
 
-## 体细胞突变
+体细胞突变
 
 [Deep whole-genome sequencing of 3 cancer cell lines on 2 sequencing platforms](https://www.nature.com/articles/s41598-019-55636-3#MOESM1)
 
@@ -79,6 +79,6 @@ We can run [VCAT](https://www.illumina.com/products/by-type/informatics-products
 
 [human HCC-1954 cell line](https://www.ebi.ac.uk/ols/ontologies/efo/terms?short_form=EFO_0001175)
 
-## SV性能验证
+SV性能验证
 
 [Kosugi S, Momozawa Y, Liu X, et al. Comprehensive evaluation of structural variation detection algorithms for whole genome sequencing[J]. Genome biology, 2019, 20(1): 117.](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1720-5)
