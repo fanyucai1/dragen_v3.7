@@ -25,9 +25,9 @@
   * -r 参考index文件夹(required)
   * -i 输入下机数据bcl文件夹(required)
   * -s 输入samplesheet(required)
-  * -e 外显子样本[list](./test)
+  * -e 外显子样本[sample.list](./test)
   * -b 外显子bed文件与 **-e** 参数一起使用
-  * -g 全基因组样本[list](./test)
+  * -g 全基因组样本[sample.list](./test)
   * -o 输出目录
   * -ne 外显子正常样本[PoN list](./test)
   * -nw 全基因组正常样本[PoN list](./test)
