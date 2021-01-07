@@ -8,12 +8,6 @@ Table of Contents
    * [FAQ](#faq)
    * [Reference](#reference)
 
-# [Documents](Documents/README.md)
-
-# [dragen-v3-7软件下载链接](https://sapac.support.illumina.com/downloads/illumina-dragen-v3-7-installers.html)
-
-# [MultiQC安装包](Documents/MultiQC-master.zip)
-
 # Quick start
 
 +   一键运行bcl2fastq数据拆分:[bcl2fastq.py](script/core/bcl2fastq.py)
@@ -101,3 +95,8 @@ Table of Contents
 * [somatic](Documents/reference/somatic.md)
 
 * [评估变异检测性能参考文献以及工具](Documents/reference/performance.md)
+
+# Appendix
+
++   [dragen软件包](https://sapac.support.illumina.com/downloads/illumina-dragen-v3-7-installers.html)
++   [MultiQC安装包](Documents/MultiQC-master.zip)
