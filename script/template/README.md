@@ -4,3 +4,8 @@
 + 第一列为样本名称必须与samplesheet中的样本名对应
 + 第一行的其它参数必须为Tgex中的参数名称，注意大小写字母不要出现偏差
 + 文件分隔符建议采用逗号
+
+# PoN.list文件说明
+
++   每一行为一个CNV正常样本的<prefix>.target.counts.gc-corrected.gz文件
++   必须标注文件全路径

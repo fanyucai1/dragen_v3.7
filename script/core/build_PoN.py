@@ -4,12 +4,14 @@ import sys
 import re
 
 def run(ref,samplelist,bed,indir,outdir):
-    if not os.path.exists (outdir):
+    if not os.path.exists ("%s/test"%outdir):
         subprocess.check_call("mkdir -p %s/test"%(outdir),shell=True)
     sample_name=[]
     infile=open(samplelist,"r")
+    outfile=open("%s/normal.list"%(outdir),"w")
     for line in infile:
-        sample_name.append(re.search('[\s,]',line.strip())[0])
+        sample_name.append(line.strip().split(",")[0])
+    outfile.close()
     for (root,dirs,files) in os.walk(indir):
         for file in files:
            if re.search('fastq.gz$',file) and  re.search('_R1_',file):
@@ -23,9 +25,12 @@ def run(ref,samplelist,bed,indir,outdir):
                                      "--cnv-counts-method overlap --cnv-segmentation-mode cbs " \
                                      "--cnv-interval-width 500" %(ref,R1,R2,i,bed,outdir,i)
                         subprocess.check_call(PoN_script,shell=True)
+                        outfile.write("%s/%s.target.counts.gc-corrected.gz\n" % (outdir,i))
+
+    subprocess.check_call("cp %s/test/*target.counts.gc-corrected.gz %s && rm -rf %s/test"%(outdir,outdir,outdir),shell=True)
 if __name__=="__main__":
     if len(sys.argv)!=6:
-        print("usage:python3 %s /hg19_ref/ sample.list exon.bed fastq/ outdir/\n")
+        print("usage:python3 %s /hg19_ref/ sample.list exon.bed fastq/ outdir/\n"%(sys.argv[0]))
         print("\nEmail:yucai.fan@illumina.com\n\n")
     else:
         run(sys.argv[1],sys.argv[2],sys.argv[3],sys.argv[4],sys.argv[5])

@@ -27,9 +27,9 @@
       * -r 参考index**文件夹**<br>
       * -i 输入下机数据bcl**文件夹**<br>
       * -s 输入samplesheet<br>
-      * -e 输入要分析的外显子样本名称，该文件为文本文件，一行为一个样本名称，样本名称需于samplesheet中保持一致<br>
+      * -e 外显子样本[samplelist](./template)样本名称需于samplesheet中保持一致<br>
           + -b 外显子bed文件与 **-e** 一起使用
-      * -g 输入要分析的全基因组样本名称，该文件为文本文件，一行为一个样本名称，样本名称需于samplesheet中保持一致<br>
+      * -g 全基因组样本[samplelist](./template)样本名称需于samplesheet中保持一致<br>
       * -o 输出目录<br>
       * -ne 外显子正常样本PoN list
       * -nw 全基因组正常样本PoN list
