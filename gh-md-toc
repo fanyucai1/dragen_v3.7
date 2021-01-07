@@ -3,7 +3,7 @@
 #
 # Steps:
 #
-#  1. Download corresponding html file for some README.md:
+#  1. Download corresponding html file for some RNA.md:
 #       curl -s $1
 #
 #  2. Discard rows where no substring 'user-content-' (github's markup):
@@ -28,7 +28,7 @@ gh_toc_version="0.7.0"
 gh_user_agent="gh-md-toc v$gh_toc_version"
 
 #
-# Download rendered into html README.md by its url.
+# Download rendered into html RNA.md by its url.
 #
 #
 gh_toc_load() {
