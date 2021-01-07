@@ -10,7 +10,6 @@ Table of Contents
    * [Reference](#reference)
 
 # Quick start
-
 +   一键运行bcl2fastq数据拆分:[bcl2fastq.py](script/core/bcl2fastq.py)
 +   一键运行fastq文件到vcf:[germline_fastq2vcf.py.py](script/core/germline_fastq2vcf.py)
 +   一键运行统计dragen数据分析结果:[result_parse.py](script/core/result_parse.py)
@@ -59,7 +58,6 @@ Table of Contents
         _Padded.bed - This BED file contains a single track of the genomic regions that you can expect to sequence when using the design for target enrichment. To determine these regions, the program extends the regions in the Covered BED file by 100 bp on each side.
 2. bed文件格式要求：必须有3列组成，另外列与列之间用tab隔开而不是空格
 3. 第三方BAM输入Dragen报错，出现不兼容的情况
-
     + 可使用[bedtools](https://bedtools.readthedocs.io/en/latest/content/tools/bamtofastq.html) 将bam文件转化为fastq再重新输入dragen
     + 首先可以尝试将BAM文件直接输入到Dragen进行重新比对生产BAM
 
