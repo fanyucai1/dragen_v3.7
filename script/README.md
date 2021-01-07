@@ -33,15 +33,3 @@
       * -o 输出目录<br>
       * -ne 外显子正常样本PoN list
       * -nw 全基因组正常样本PoN list
-  + 示例:
-
-    * wgs
-
-          python3 bcl2vcf.py -i bcl/ -g wgs.list -s SampleSheet.csv -r /staging/reference/hg19_v8/ -o /output/ -ng normal_wgs.list
-    * wes
-
-          python3 bcl2vcf.py -i bcl/ -e exom.list -s SampleSheet.csv -b TruSeq_Exome_TargetedRegions_v1.2.bed -r /staging/reference/hg19_v8/ -o /output/ -ne normal_wes.list
-  
-    * wes+wgs
-
-          python3 bcl2vcf.py -i bcl/ -g wgs.list -e exom.list -s SampleSheet.csv -b TruSeq_Exome_TargetedRegions_v1.2.bed -r /staging/reference/hg19_v8/ -o /output/ -ng normal_wgs.list -ne normal_wes.list
