@@ -1,4 +1,4 @@
-# samplelist文件说明
+# sample.list文件说明
 
 + 格式为*txt文件
 + 逗号分隔符
