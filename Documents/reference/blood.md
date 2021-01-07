@@ -1,3 +1,0 @@
-[Short N J, Patel K P, Albitar M, et al. Targeted next-generation sequencing of circulating cell-free DNA vs bone marrow in patients with acute myeloid leukemia[J]. Blood Advances, 2020, 4(8): 1670-1677.](https://ashpublications.org/blood/article/132/Supplement%201/4212/275750/Targeted-Next-Generation-Sequencing-of-Cell-Free)
-
-[Vicente A, Patel B A, Gutierrez-Rodrigues F, et al. Eltrombopag monotherapy can improve hematopoiesis in patients with low to intermediate risk-1 myelodysplastic syndrome[J]. Haematologica, 2020.](https://haematologica.org/article/view/9761)

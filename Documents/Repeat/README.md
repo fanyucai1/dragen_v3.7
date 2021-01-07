@@ -27,3 +27,5 @@
 [Dolzhenko E, Deshpande V, Schlesinger F, et al. ExpansionHunter: a sequence-graph-based tool to analyze variation in short tandem repeat regions[J]. Bioinformatics, 2019, 35(22): 4754-4756.](https://academic.oup.com/bioinformatics/article/35/22/4754/5499079)
 
 [Anthony J , Hannan. Tandem repeats mediating genetic plasticity in health and disease.[J]. Nature reviews. Genetics, 2018.](https://www.nature.com/articles/nrg.2017.115)
+
+[Bahlo M, Bennett M F, Degorski P, et al. Recent advances in the detection of repeat expansions with short-read next-generation sequencing[J]. F1000Research, 2018, 7.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6008857/)
