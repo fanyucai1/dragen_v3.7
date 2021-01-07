@@ -51,7 +51,9 @@ if args.wes:
     fastq2vcf_wes_par=core.run_tgex.run(args.wes)
     wes_vcf = out_path + "/wes_vcf"
     subprocess.check_call("mkdir -p %s" % (wes_vcf), shell=True)
-    core.germline_fastq2vcf.run(args.ref, args.wes, fastq_dir, wes_vcf, args.bed, args.normal_wes)#fastq2vcf
+    #fastq2vcf
+    cmd='%s %s/germline_fastq2vcf.py -r %s -s % -o %s -f %s -p %s -b %s'%(python3,dir_name,args.ref,args.wes,wes_vcf, fastq_dir,args.normal_wes,args.bed)
+    subprocess.check_call(cmd,shell=True)
     core.result_parse.run(wes_vcf, "%s.wes" % (localtime), out_path)  # output total matrix
     core.copy2vcf.run(wes_vcf, "%s/combine_wes_vcf/" % (out_path))  # copy pass vcf to one directoy
     if args.cofig!="false":
@@ -59,7 +61,9 @@ if args.wes:
 if args.wgs:
     wgs_vcf = out_path + "/wgs_vcf"
     subprocess.check_call("mkdir -p %s" % (wgs_vcf), shell=True)
-    core.wgs.run(args.ref,args.wgs,fastq_dir,wgs_vcf,args.normal_wgs)
+    # fastq2vcf
+    cmd = '%s %s/germline_fastq2vcf.py -r %s -s % -o %s -f %s -p %s' % (python3, dir_name, args.ref, args.wgs, wgs_vcf, fastq_dir, args.normal_wgs)
+    subprocess.check_call(cmd, shell=True)
     core.result_parse.run(wgs_vcf, "%s.wgs" % (localtime), out_path)  # output total matrix
     core.copy2vcf.run(wgs_vcf, "%s/combine_wgs_vcf/" % (out_path))  # copy pass vcf to one directoy
     if args.cofig != "false":

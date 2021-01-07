@@ -2,7 +2,6 @@
 #2021.01.05 vserion:1.0
 import os
 import subprocess
-import argparse
 import re
 import gzip
 import sys
