@@ -35,5 +35,5 @@
 
 备注：
 
-**bcl2vcf_dev.py**需要设置python3路径
-**[core/run_tgex.py](core/run_tgex.py)**需要设置python3路径
+**bcl2vcf_dev.py**需要设置python3路径<br>
+**core/run_tgex.py**需要设置python3路径
