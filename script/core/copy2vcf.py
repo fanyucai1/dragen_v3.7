@@ -34,6 +34,9 @@ def run(indir,outdir):
                         subprocess.check_call('gzip -v %s'%(os.path.join(outdir, "%s.cnv.pass.vcf" % (sample_name))),shell=True)
                         subprocess.check_call('rm -rf %s' % (os.path.join(outdir, "%s.cnv.pass.vcf" % (sample_name))),
                                               shell=True)
+                    else:
+                        subprocess.check_call('rm -rf %s' % (os.path.join(outdir, "%s.cnv.pass.vcf" % (sample_name))),
+                                              shell=True)
             ###################################################################SNP+Indel
             if re.search('.hard-filtered.vcf.gz$',file):
                 sample_name = file.split(".hard-filtered.vcf.gz")[0]
@@ -54,6 +57,10 @@ def run(indir,outdir):
                 else:
                     if not os.path.exists(os.path.join(outdir, "%s.hard-filtered.pass.vcf.gz" % (sample_name))):
                         subprocess.check_call('gzip -v %s'%(os.path.join(outdir, "%s.hard-filtered.pass.vcf" % (sample_name))),shell=True)
+                        subprocess.check_call(
+                            'rm -rf %s' % (os.path.join(outdir, "%s.hard-filtered.pass.vcf" % (sample_name))),
+                            shell=True)
+                    else:
                         subprocess.check_call(
                             'rm -rf %s' % (os.path.join(outdir, "%s.hard-filtered.pass.vcf" % (sample_name))),
                             shell=True)
@@ -79,6 +86,9 @@ def run(indir,outdir):
                         subprocess.check_call('gzip -v %s'%(os.path.join(outdir, "%s.sv.pass.vcf" % (sample_name))),shell=True)
                         subprocess.check_call('rm -rf %s' % (os.path.join(outdir, "%s.sv.pass.vcf" % (sample_name))),
                                               shell=True)
+                    else:
+                        subprocess.check_call('rm -rf %s' % (os.path.join(outdir, "%s.sv.pass.vcf" % (sample_name))),
+                                              shell=True)
             ###################################################################repeat
             if re.search('.repeats.vcf.gz$',file):
                 sample_name = file.split(".repeats.vcf.gz")[0]
@@ -101,6 +111,9 @@ def run(indir,outdir):
                     if not os.path.exists(os.path.join(outdir, "%s.repeats.pass.vcf.gz" % (sample_name))):
                         subprocess.check_call('gzip -v %s'%(os.path.join(outdir, "%s.repeats.pass.vcf" % (sample_name))),shell=True)
                         subprocess.check_call('rm -rf %s'%(os.path.join(outdir, "%s.repeats.pass.vcf" % (sample_name))),shell=True)
+                    else:
+                        subprocess.check_call(
+                            'rm -rf %s' % (os.path.join(outdir, "%s.repeats.pass.vcf" % (sample_name))), shell=True)
             ###################################################################
             if re.search('._coverage_metrics.csv$',file) or re.search('.fastqc_metrics.csv$',file) or re.search('mapping_metrics.csv$',file):
                 subprocess.check_call('cp %s %s' % (os.path.join(root, file), outdir), shell=True)
