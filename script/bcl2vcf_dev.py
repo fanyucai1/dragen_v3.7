@@ -52,7 +52,7 @@ if args.wes:
     wes_vcf = out_path + "/wes_vcf"
     subprocess.check_call("mkdir -p %s" % (wes_vcf), shell=True)
     #fastq2vcf
-    cmd='%s %s/germline_fastq2vcf.py -r %s -s % -o %s -f %s -p %s -b %s'%(python3,dir_name,args.ref,args.wes,wes_vcf, fastq_dir,args.normal_wes,args.bed)
+    cmd='%s %s/germline_fastq2vcf.py -r %s -s %s -o %s -f %s -p %s -b %s'%(python3,dir_name,args.ref,args.wes,wes_vcf,fastq_dir,args.normal_wes,args.bed)
     subprocess.check_call(cmd,shell=True)
     core.result_parse.run(wes_vcf, "%s.wes" % (localtime), out_path)  # output total matrix
     core.copy2vcf.run(wes_vcf, "%s/combine_wes_vcf/" % (out_path))  # copy pass vcf to one directoy

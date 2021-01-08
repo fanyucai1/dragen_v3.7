@@ -37,9 +37,11 @@ for (root,dirs,files) in os.walk(args.fastq_dir):
             R2=R1.replace("_R1_","_R2_")
             cmd += " -1 %s -2 %s " % (R1, R2)
             for i in samplename:
-                if re.search(i,file) and not os.path.exists("%s/%s/%s.time_metrics.csv"%(args.out_dir,i,i)):
+                outdir=args.out_dir+"/"+"i"
+                prefix=args.out_dir+"/"+"i"+"i"
+                if re.search(i,file) and not os.path.exists("%s.time_metrics.csv"%(prefix)):
                     cmd += " --RGID Illumina_RGID --RGSM %s " % (i)
-                    cmd += " --output-directory %s/%s --output-file-prefix %s " % (args.out_dir, i, i)
-                    if not os.path.exists("%s/%s"% (args.out_dir,i)):
-                        subprocess.check_call("mkdir -p %s/%s"% (args.out_dir,i),shell=True)
+                    cmd += " --output-directory %s --output-file-prefix %s " % (outdir, i)
+                    if not os.path.exists("%s"% (outdir)):
+                        subprocess.check_call("mkdir -p %s"% (outdir),shell=True)
                     subprocess.check_call(cmd,shell=True)
