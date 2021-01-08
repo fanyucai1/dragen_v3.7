@@ -28,7 +28,7 @@ def run(samplelist,config_file,indir):
     infile.close()
     for (root, dirs, files) in os.walk(indir):
         for sample_name in sample_par:
-            tgex_script = "python3 %s/tgex_uploadSamples.py --config %s " % (dir_name, config_file)
+            tgex_script = "python3 %s/tgex_uploadSamples.py --config %s %s " % (dir_name, config_file,sample_par[sample_name])
             for file in files:
                 if re.search(sample_name, file):
                     if re.search('.sv.pass.vcf.gz$', file):
