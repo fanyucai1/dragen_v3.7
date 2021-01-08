@@ -26,7 +26,7 @@ def run(ref,samplelist,bed,indir,outdir):
                                      "--cnv-interval-width 500" %(ref,R1,R2,i,bed,outdir,i)
                         subprocess.check_call(PoN_script,shell=True)
                         outfile.write("%s/%s.target.counts.gc-corrected.gz\n" % (outdir,i))
-
+    outfile.close()
     subprocess.check_call("cp %s/test/*target.counts.gc-corrected.gz %s && rm -rf %s/test"%(outdir,outdir,outdir),shell=True)
 if __name__=="__main__":
     if len(sys.argv)!=6:
