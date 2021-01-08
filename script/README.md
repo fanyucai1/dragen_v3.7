@@ -31,3 +31,9 @@
   * -o 输出目录
   * -ne 外显子正常样本[PoN list](./test)
   * -nw 全基因组正常样本[PoN list](./test)
+
+
+备注：
+
+**bcl2vcf_dev.py**需要设置python3路径
+**[core/run_tgex.py](core/run_tgex.py)**需要设置python3路径
