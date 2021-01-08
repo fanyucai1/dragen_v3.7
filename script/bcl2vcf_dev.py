@@ -56,7 +56,7 @@ if args.wes:
     subprocess.check_call(cmd,shell=True)
     core.result_parse.run(wes_vcf, "%s.wes" % (localtime), out_path)  # output total matrix
     core.copy2vcf.run(wes_vcf, "%s/combine_wes_vcf/" % (out_path))  # copy pass vcf to one directoy
-    if args.cofig!="false":
+    if args.config!="false":
         core.run_tgex.run(args.wes,args.config,"%s/combine_wes_vcf/" % (out_path))
 if args.wgs:
     wgs_vcf = out_path + "/wgs_vcf"
@@ -66,7 +66,7 @@ if args.wgs:
     subprocess.check_call(cmd, shell=True)
     core.result_parse.run(wgs_vcf, "%s.wgs" % (localtime), out_path)  # output total matrix
     core.copy2vcf.run(wgs_vcf, "%s/combine_wgs_vcf/" % (out_path))  # copy pass vcf to one directoy
-    if args.cofig != "false":
+    if args.config != "false":
         core.run_tgex.run(args.wgs, args.config, "%s/combine_wgs_vcf/" % (out_path))
 #########################################################
 print("Done")
