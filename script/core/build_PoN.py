@@ -21,7 +21,7 @@ def run(ref,samplelist,bed,indir,outdir):
                         PoN_script = "dragen -r %s -1 %s -2 %s --RGSM %s --cnv-target-bed %s --output-directory %s/test --output-file-prefix %s " \
                                      "--RGID illumina --enable-map-align true --enable-cnv true --cnv-enable-gcbias-correction true " \
                                      "--cnv-enable-self-normalization false " \
-                                     "--cnv-counts-method overlap --cnv-segmentation-mode cbs " \
+                                     "--cnv-counts-method overlap " \
                                      "--cnv-interval-width 500" %(ref,R1,R2,i,bed,outdir,i)
                         subprocess.check_call(PoN_script,shell=True)
                         outfile.write("%s/%s.target.counts.gc-corrected.gz\n" % (outdir,i))
