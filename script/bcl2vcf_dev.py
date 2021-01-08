@@ -62,7 +62,7 @@ if args.wgs:
     wgs_vcf = out_path + "/wgs_vcf"
     subprocess.check_call("mkdir -p %s" % (wgs_vcf), shell=True)
     # fastq2vcf
-    cmd = '%s %s/germline_fastq2vcf.py -r %s -s % -o %s -f %s -p %s' % (python3, dir_name, args.ref, args.wgs, wgs_vcf, fastq_dir, args.normal_wgs)
+    cmd = '%s %s/germline_fastq2vcf.py -r %s -s %s -o %s -f %s -p %s' % (python3, dir_name, args.ref, args.wgs, wgs_vcf, fastq_dir, args.normal_wgs)
     subprocess.check_call(cmd, shell=True)
     core.result_parse.run(wgs_vcf, "%s.wgs" % (localtime), out_path)  # output total matrix
     core.copy2vcf.run(wgs_vcf, "%s/combine_wgs_vcf/" % (out_path))  # copy pass vcf to one directoy
