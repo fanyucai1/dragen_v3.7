@@ -11,7 +11,6 @@ def run(ref,samplelist,bed,indir,outdir):
     outfile=open("%s/normal.list"%(outdir),"w")
     for line in infile:
         sample_name.append(line.strip().split(",")[0])
-    outfile.close()
     for (root,dirs,files) in os.walk(indir):
         for file in files:
            if re.search('fastq.gz$',file) and  re.search('_R1_',file):
