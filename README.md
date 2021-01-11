@@ -11,9 +11,13 @@ Table of Contents
 
 # Quick start
 +   一键运行bcl2fastq数据拆分:[bcl2fastq.py](script/core/bcl2fastq.py)
+        python3 bcl2fastq.py /path/to/samplesheet.csv /path/to/bcl_directory/ /output_directory/
 +   一键运行fastq文件到vcf:[germline_fastq2vcf.py.py](script/core/germline_fastq2vcf.py)
+        python3 germline_fastq2vcf.py -r /path/to/hg19_index/ -s /path/to/sample.list -b /path/to/exon.bed -p /path/to/PoN.list -f /path/to/fastq
 +   一键运行统计dragen数据分析结果:[result_parse.py](script/core/result_parse.py)
+        python3 result_parse.py input_dir/ prefix output_dir/
 +   一键建立CNV的PoN基线文件:[build_PoN.py](script/core/build_PoN.py)
+        python3 build_PoN.py /hg19_ref/ sample.list exon.bed fastq/ outdir/
 +   一键提取dragen分析结果中的PASS位点:[copy2vcf.py](script/core/copy2vcf.py)
 +   一键上传vcf到Tgex网站:[run_tgex.py](script/core/run_tgex.py)
 

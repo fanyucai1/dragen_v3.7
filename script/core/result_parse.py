@@ -66,7 +66,7 @@ def run(input_dir,prefix,output_dir):
     
 if __name__=="__main__":
     if len(sys.argv)!=4:
-        print("usage:python3 %s input_dir/ prefix output_dir/\n")
+        print("usage:python3 %s input_dir/ prefix output_dir/\n"%(sys.argv[0]))
         print("\nEmail:yucai.fan@illumina.com")
     else:
         run(sys.argv[1],sys.argv[2],sys.argv[3])
