@@ -2,8 +2,7 @@
 
     usage: This script run from bcl to vcf.
 
-     [-h] -i INDIR -s SAMPLESHEET -r REF [-e WES] [-b BED] [-g WGS] [-o OUTDIR]
-                                              [-ne NORMAL_WES] [-nw NORMAL_WGS]
+     [-h] -i INDIR -s SAMPLESHEET -r REF [-e WES] [-b BED] [-g WGS] [-o OUTDIR] [-ne NORMAL_WES] [-ng NORMAL_WGS] [-c CONFIG]
     
     optional arguments:
       -h, --help            show this help message and exit
@@ -19,8 +18,11 @@
                             output directory
       -ne NORMAL_WES, --normal_wes NORMAL_WES
                             exon normal list file
-      -nw NORMAL_WGS, --normal_wgs NORMAL_WGS
+      -ng NORMAL_WGS, --normal_wgs NORMAL_WGS
                             wgs normal list file
+      -c CONFIG, --config CONFIG
+                            tgex config file
+
 
   * -r 参考index文件夹(required)
   * -i 输入下机数据bcl文件夹(required)
@@ -31,6 +33,7 @@
   * -o 输出目录
   * -ne 外显子正常样本[PoN list](./test)
   * -nw 全基因组正常样本[PoN list](./test)
+  * -c Tgex的config文件
 
 
 备注：
