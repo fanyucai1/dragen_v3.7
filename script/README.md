@@ -40,3 +40,13 @@
 
 **bcl2vcf_dev.py**需要设置python3路径<br>
 **core/run_tgex.py**需要设置python3路径
+
+FAQ:
+
+sample.list为逗号作为分隔符的文本文件，如果是excel输出的csv文件，需要将二进制文件转换为txt文件，具体方法如下：
+
+    pip3 install csv2txt
+    csv2txt samplelist.csv samplelist.txt -s ","
+    * samplelist.csv    为excel编辑的csv文件
+    * samplelist.txt    为输出的以逗号为分隔符的文本文件
+    * -s 为指定输出文本文件的分隔符
