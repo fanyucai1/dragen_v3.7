@@ -29,7 +29,7 @@ for (root,dirs,files) in os.walk(args.fastq_dir):
         else:
             cmd+=" --cnv-enable-self-normalization true "
         if args.bed !="false":
-            cmd += " --sv-exome true --vc-target-bed %s --cnv-target-bed %s --sv-call-regions-bed %s --cnv-interval-width 500 " % (args.bed, args.bed, args.bed)
+            cmd += " --sv-exome true --vc-target-bed %s --cnv-target-bed %s --sv-call-regions-bed %s --cnv-interval-width 1000 " % (args.bed, args.bed, args.bed)
         else:
             cmd+=" --repeat-genotype-enable=true --repeat-genotype-specs=/opt/edico/repeat-specs/hg19/ "
         if re.search('fastq.gz$',file) and re.search("_R1_",file):
