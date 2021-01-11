@@ -22,7 +22,7 @@ def run(ref,samplelist,bed,indir,outdir):
                                      "--RGID illumina --enable-map-align true --enable-cnv true --cnv-enable-gcbias-correction true " \
                                      "--cnv-enable-self-normalization false " \
                                      "--cnv-counts-method overlap " \
-                                     "--cnv-interval-width 500" %(ref,R1,R2,i,bed,outdir,i)
+                                     "--cnv-interval-width 1000" %(ref,R1,R2,i,bed,outdir,i)
                         subprocess.check_call(PoN_script,shell=True)
                         outfile.write("%s/%s.target.counts.gc-corrected.gz\n" % (outdir,i))
     outfile.close()
