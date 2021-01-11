@@ -23,3 +23,7 @@
     *   exon.bed    bed文件
     *   outdir/ 输出结果文件夹
 
+5.  python3 core/run_tgex.py sample.list /path/to/tgex.config.yml /indir_vcf/
+    *   sample.list 样本sample.list
+    *   /path/to/tgex.config.yml    Tge对应config文件
+    *   /indir_vcf/ 输入vcf文件夹
