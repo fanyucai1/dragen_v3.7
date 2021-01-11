@@ -19,6 +19,7 @@ Table of Contents
 +   一键建立CNV的PoN基线文件:[build_PoN.py](script/core/build_PoN.py)
         python3 build_PoN.py /hg19_ref/ sample.list exon.bed fastq/ outdir/
 +   一键提取dragen分析结果中的PASS位点:[copy2vcf.py](script/core/copy2vcf.py)
+        
 +   一键上传vcf到Tgex网站:[run_tgex.py](script/core/run_tgex.py)
 
 # Input files
