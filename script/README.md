@@ -1,4 +1,4 @@
-## bcl2vcf.py
+## bcl2vcf_dev.py
 
     usage: This script run from bcl to vcf.
 
