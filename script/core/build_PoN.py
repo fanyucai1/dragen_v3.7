@@ -4,6 +4,7 @@ import sys
 import re
 
 def run(ref,samplelist,bed,indir,outdir):
+    outdir=os.path.abspath(outdir)
     if not os.path.exists ("%s/test"%outdir):
         subprocess.check_call("mkdir -p %s/test"%(outdir),shell=True)
     sample_name=[]
