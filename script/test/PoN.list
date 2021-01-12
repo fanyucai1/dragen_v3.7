@@ -1,6 +1,6 @@
-/data/output_trio1/sample1.target.counts.gc-corrected.gz
-/data/output_trio1/sample2.target.counts.gc-corrected.gz
-/data/output_trio2/sample4.target.counts.gc-corrected.gz
-/data/output_trio2/sample5.target.counts.gc-corrected.gz
-/data/output_trio3/sample7.target.counts.gc-corrected.gz
-/data/output_trio3/sample8.target.counts.gc-corrected.gz
+/data/output_trio1/sample1.target.counts.gz
+/data/output_trio1/sample2.target.counts.gz
+/data/output_trio2/sample4.target.counts.gz
+/data/output_trio2/sample5.target.counts.gz
+/data/output_trio3/sample7.target.counts.gz
+/data/output_trio3/sample8.target.counts.gz
