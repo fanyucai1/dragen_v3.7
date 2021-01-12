@@ -23,8 +23,9 @@ def run(indir,outdir):
                     else:
                         array = eachline.split("\t")
                         if array[6] == "PASS":
-                            file_result = True
-                            file_out.write(eachline)
+                            if array[4]=="<DUP>" or array[4]=="<DEL>":
+                                file_result = True
+                                file_out.write(eachline)
                 file_in.close()
                 file_out.close()
                 if file_result=="false":
