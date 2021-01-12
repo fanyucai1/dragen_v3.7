@@ -2,7 +2,6 @@ import os
 import subprocess
 import sys
 import re
-from . import file_type
 
 def run(ref,samplelist,bed,indir,outdir):
     if not os.path.exists ("%s/test"%outdir):
