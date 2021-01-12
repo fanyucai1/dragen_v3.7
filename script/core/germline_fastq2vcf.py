@@ -23,7 +23,7 @@ for (root,dirs,files) in os.walk(args.fastq_dir):
         cmd = "dragen -f -r %s " % (args.ref)
         cmd += " --enable-duplicate-marking true --output-format BAM --enable-map-align true "
         cmd += " --enable-map-align-output true --enable-bam-indexing true --enable-variant-caller true "
-        cmd += " --enable-cnv true --enable-sv true "
+        cmd += " --enable-cnv true --enable-sv true --cnv-enable-gcbias-correction false "
         if args.PoN!="false":
             cmd += " --cnv-normals-list %s --cnv-enable-self-normalization false " % (args.PoN)
         else:
