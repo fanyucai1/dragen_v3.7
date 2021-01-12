@@ -34,14 +34,14 @@ python3 build_PoN.py /hg19_ref/ sample.list exon.bed fastq/ outdir/
         *   outdir/ 输出结果文件夹
 
 5.  拷贝dragen所有样本的分析结果到一个文件夹，并提取所有PASS位点<br>
-    5-1. python3 core/copy2vcf.py /dragen_result_dir/ /output_directoy/
     
-        *   /dragen_result_dir/ dragen数据分析结果文件夹
-        *   /output_directoy/   输出结果文件夹
-    
-    基于5-1的输出上传tgex<br>
-    5-2.  python3 core/run_tgex.py sample.list /path/to/tgex.config.yml /indir_vcf/
-    
+    5-1.    python3 core/copy2vcf.py /dragen_result_dir/ /output_directoy/
+
+            *   /dragen_result_dir/ dragen数据分析结果文件夹
+            *   /output_directoy/   输出结果文件夹
+
+    5-2.    python3 core/run_tgex.py sample.list /path/to/tgex.config.yml /indir_vcf/
+
         *   sample.list 样本sample.list
         *   /path/to/tgex.config.yml    Tge对应config文件
         *   /indir_vcf/ 输入vcf文件夹
