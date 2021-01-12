@@ -19,13 +19,13 @@ def run(ref,samplelist,bed,indir,outdir):
                 for i in sample_name:
                     if re.search(i,file):
                         PoN_script = "dragen -r %s -1 %s -2 %s --RGSM %s --cnv-target-bed %s --output-directory %s/test --output-file-prefix %s " \
-                                     "--RGID illumina --enable-map-align true --enable-cnv true --cnv-enable-gcbias-correction true " \
+                                     "--RGID illumina --enable-map-align true --enable-cnv true " \
                                      "--cnv-enable-self-normalization false " \
                                      "--cnv-interval-width 1000" %(ref,R1,R2,i,bed,outdir,i)
                         subprocess.check_call(PoN_script,shell=True)
-                        outfile.write("%s/%s.target.counts.gc-corrected.gz\n" % (outdir,i))
+                        outfile.write("%s/%s.target.counts.gz\n" % (outdir,i))
     outfile.close()
-    subprocess.check_call("cp %s/test/*target.counts.gc-corrected.gz %s && rm -rf %s/test"%(outdir,outdir,outdir),shell=True)
+    subprocess.check_call("cp %s/test/*target.counts.gz %s && rm -rf %s/test"%(outdir,outdir,outdir),shell=True)
 if __name__=="__main__":
     if len(sys.argv)!=6:
         print("usage:python3 %s /hg19_ref/ sample.list exon.bed fastq/ outdir/\n"%(sys.argv[0]))
