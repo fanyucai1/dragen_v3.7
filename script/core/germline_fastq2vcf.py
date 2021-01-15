@@ -13,7 +13,7 @@ parse.add_argument("-p","--PoN",help="PoN list",default="false")
 parse.add_argument("-f","--fastq_dir",help="fastq directory",required=True)
 args=parse.parse_args()
 
-infile=open(args.samplelist,"r")
+infile=open(args.samplelist,"r",encoding='gbk')
 samplename=[]
 for line in infile:
     samplename.append(line.strip().split(",")[0])

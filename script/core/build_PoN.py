@@ -8,7 +8,7 @@ def run(ref,samplelist,bed,indir,outdir):
     if not os.path.exists ("%s/test"%outdir):
         subprocess.check_call("mkdir -p %s/test"%(outdir),shell=True)
     sample_name=[]
-    infile=open(samplelist,"r")
+    infile=open(samplelist,"r",encoding='gbk')
     outfile=open("%s/normal.list"%(outdir),"w")
     for line in infile:
         sample_name.append(line.strip().split(",")[0])

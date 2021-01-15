@@ -5,7 +5,7 @@ sys.path.append(dir_name)
 
 def run(samplelist,config_file,indir):
     ################################
-    infile=open(samplelist,"r")
+    infile=open(samplelist,"r",encoding='gbk')
     par_name,num,sample_par=[],0,{}
     for line in infile:
         num+=1
