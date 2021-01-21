@@ -13,6 +13,7 @@ parse.add_argument("-p","--PoN",help="PoN list",default="false")
 parse.add_argument("-f","--fastq_dir",help="fastq directory",required=True)
 args=parse.parse_args()
 
+shell=open("%s/fastq2vcf.sh"%(args.out_dir),"w")
 infile=open(args.samplelist,"r",encoding='gbk')
 samplename=[]
 for line in infile:
@@ -46,3 +47,5 @@ for i in range(0,len(samplename)):
                     if not os.path.exists("%s"% (args.out_dir+"/"+samplename[i])):
                         subprocess.check_call("mkdir -p %s"% (args.out_dir+"/"+i),shell=True)
                         subprocess.check_call(cmd,shell=True)
+                        shell.write(cmd)
+shell.close()
