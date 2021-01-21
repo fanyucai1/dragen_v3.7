@@ -46,6 +46,6 @@ for i in range(0,len(samplename)):
                     cmd += " -1 %s -2 %s " % (R1, R2)
                     if not os.path.exists("%s"% (args.out_dir+"/"+samplename[i])):
                         subprocess.check_call("mkdir -p %s"% (args.out_dir+"/"+i),shell=True)
-                        subprocess.check_call(cmd,shell=True)
+                        #subprocess.check_call(cmd,shell=True)
                         shell.write(cmd)
 shell.close()
