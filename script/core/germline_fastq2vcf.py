@@ -45,3 +45,4 @@ for (root,dirs,files) in os.walk(args.fastq_dir):
                     if not os.path.exists("%s"% (outdir)):
                         subprocess.check_call("mkdir -p %s"% (outdir),shell=True)
                     subprocess.check_call(cmd,shell=True)
+                    cmd=""
