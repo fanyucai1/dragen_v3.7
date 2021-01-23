@@ -38,6 +38,7 @@ for (root,dirs,files) in os.walk(args.fastq_dir):
             cmd += " -1 %s -2 %s " % (R1, R2)
             for i in samplename:
                 outdir=args.out_dir+"/"+i
+                ###################匹配样本名头文件
                 if re.search("^%s_S"%i,file) and not os.path.exists("%s.time_metrics.csv"%(args.out_dir+"/"+i+"/"+i)):
                     cmd += " --RGID Illumina_RGID --RGSM %s " % (i)
                     cmd += " --output-directory %s --output-file-prefix %s " % (outdir, i)
