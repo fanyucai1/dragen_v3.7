@@ -16,6 +16,7 @@ bcl2vcf.py 脚本使用说明
       -g WGS, --wgs WGS     wgs sample list
       -o OUTDIR, --outdir OUTDIR
                             output directory
+      -p PON, --PoN PON     PoN file
 
 -i  输入下机数据bcl文件夹<br>
 -s  输入样本Samplesheet<br>
@@ -24,4 +25,5 @@ bcl2vcf.py 脚本使用说明
 -g  输入wgs样本名称list，一行一样本名，必须与samplesheet中样本名一致<br>
 -b  bed文件<br>
 -o  输出结果文件夹<br>
+-p  PoN文件
 

@@ -1,0 +1,21 @@
+dragen \
+-r /staging/reference/hg19 \
+--fastq-list ${1} \
+--fastq-list-sample-id ${2} \
+--enable-map-align true \
+--enable-map-align-output true \
+--output-format BAM \
+--enable-duplicate-marking true \
+--enable-sort true \
+--enable-bam-indexing true \
+--enable-variant-caller true \
+--enable-cnv true \
+--cnv-enable-self-normalization true \
+--enable-sv true \
+--sv-reference /staging/reference/hg19/hg19.fa \
+--sample-sex ${3} \
+--repeat-genotype-enable true \
+--repeat-genotype-specs /opt/edico/repeat-specs/hg19/ \
+--repeat-genotype-ref-fasta /staging/reference/hg19/hg19.fa \
+--output-directory ${4} \
+--output-file-prefix ${2}
