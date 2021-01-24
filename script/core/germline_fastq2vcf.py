@@ -1,9 +1,8 @@
-import sys
 import subprocess
 import os
 import re
 import argparse
-
+#
 parse=argparse.ArgumentParser("Run germline pipeline from fastq2vcf.")
 parse.add_argument("-r","--ref",help="reference directory",required=True)
 parse.add_argument("-s","--samplelist",help="sample list",required=True)
