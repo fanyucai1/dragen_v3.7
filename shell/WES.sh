@@ -7,8 +7,7 @@ mkdir -p ${1} && dragen -f \
         --output-format BAM --enable-map-align true \
         --enable-map-align-output true \
         --enable-bam-indexing true \
-        --enable-variant-caller true --cnv-enable-self-normalization true \
-        --enable-cnv true --enable-sv true \
-        --repeat-genotype-enable=true  \
-        --repeat-genotype-specs=/opt/edico/repeat-specs/hg19/ \
-        --repeat-genotype-ref-fasta /staging/reference/hg19/hg19.fa
+        --enable-variant-caller true --vc-target-bed ${6} --cnv-enable-self-normalization true \
+        --enable-cnv true --cnv-target-bed ${6} \
+        --cnv-interval-width 500 \
+        --enable-sv true --sv-call-regions-bed ${6} --sv-exome true
